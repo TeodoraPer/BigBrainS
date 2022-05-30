@@ -1,0 +1,498 @@
+.logo {
+  width: 120px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.groomRoom {
+  text-align: center;
+  margin-top: 10px;
+  ;
+  font-weight: bolder;
+  color: #595B83;
+  font-family: 'Sacramento', cursive;
+  font-weight: bolder;
+  font-size: 40pt;
+}
+
+.ispodLogoa {
+  font-weight: bold;
+  font-family: 'Spline Sans Mono', monospace;
+  color: #595B83;
+  font-size: 18px;
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -30px;
+}
+.navbar {
+  margin-left: 25%;
+  margin-top: -125px;
+  font-family: 'Spline Sans Mono', monospace;
+  font-size: 14pt;
+  border: none;
+}
+
+.dugme3{
+  width: 270px;
+  border: none;
+  background-color: #FFC7C7;
+  text-align: center;
+
+}
+.dugme {
+  width: 180px;
+  border: none;
+  background-color: #FFC7C7;
+  text-align: center;
+}
+
+.dugme1 {
+  width: 90px;
+  border: none;
+  ;
+  background-color: #FFC7C7;
+  text-align: center;
+}
+
+.dugme2 {
+  width: 120px;
+  border: none;
+  ;
+  background-color: #FFC7C7;
+  text-align: center;
+}
+.linkNavBar {
+  color: #595B83;
+  text-decoration: none;
+}
+
+.linkNavBar:active, li a:visited, a:hover, a:link {
+  color: #595B83;
+}
+
+/*Centar*/
+.divCentar {
+  margin-top: -10px;
+  min-height: 700px;
+  padding-top: 20px;
+  background-color: white;
+}
+
+.centar {
+  background-color: white;
+}
+
+.linija {
+  color: #FFE2E2;
+  border-color: #595B83;
+  border-top-style: dotted;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-width: 10px;
+  width: 20%;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.dobrodosliTekst {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Spline Sans Mono', monospace;
+  color: #595B83;
+  font-size: 25px;
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-family: 'Spline Sans Mono', monospace;
+  color: #595B83;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Login*/
+
+.login{
+  background:#FFC7C7;;
+  border-radius:5px;
+  box-shadow:0px 0px 5px #595B83;
+  font-size: 16px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+ height: 340px;
+  width: 360px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inpt{
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  width: 260px;
+  height: 40px;
+  margin-left: 50px;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  background-color: white !important;
+}
+
+
+.Login_dugme{ 
+  margin-top: 40px;
+  display: block-inline;
+  text-align: center;
+  
+}
+.button2{ 
+  border-radius: 8px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  border-style: none;
+  background: white;
+  margin-top: 10px;
+  width: 130px !important;
+  text-align: center !important;
+ margin-bottom: 10px;
+}
+.promena{
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  font-size: 16px;
+}
+
+/*Promena lozinke forma*/
+.naziv{ padding-top: 50px;
+  text-align: center;
+ 
+}
+.inpt1{
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  width: 260px;
+  height: 40px;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  background-color: white !important;
+}
+.promena_lozinke{
+  background:#FFC7C7;
+  border-radius:5px;
+  box-shadow:0px 0px 5px #595B83;
+  font-size: 16px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+ height: 440px;
+  width: 570px;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.naziv2{ padding-top: 20px;
+  text-align: center;
+
+  font-size: 16px !important;
+}
+.PromenaLozinke_dugme{ 
+  
+  margin-top: 50px;
+  display: block-inline;
+  text-align: center;
+
+}
+
+
+.button1{
+  border-radius: 8px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  border-style: none;
+  background: white;
+  margin-top: -60px;
+  width: 200px !important;
+  text-align: center !important;
+ margin-bottom: 30px;
+}
+
+.desno{ 
+text-align: left;
+font-weight: bolder;
+}
+.levo{ 
+text-align: left !important;
+}
+
+.tabela{ 
+ padding-top: 20px;
+  margin-left: 30px;
+  width: 550px;
+    padding-top: 60px;
+}
+
+.pomeriNaDole{ 
+  margin-top: 10px;
+}
+.porukica{ 
+  margin-top: 10px;
+  font-size: 10pt;
+  text-align: center;
+
+}
+.porukica1{ 
+  margin-left: -200px;
+  font-size: 10pt;
+  text-align: center;
+}
+
+
+
+
+/*Futer*/
+
+
+/*Pavlov futer*/
+.flavor_text {
+  color: #595B83;
+  font-size: 18px;
+  font-family: 'Spline Sans Mono', monospace;
+  padding-bottom: 16px;
+  text-align: center;
+  margin-top: -15px;
+  ;
+  margin-bottom: 20px;
+}
+
+.preporuci {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Spline Sans Mono', monospace;
+}
+
+.scrollmenu {
+  margin-top: -20px;
+  background-color: #F6F6F6;
+  overflow: auto;
+  white-space: nowrap;
+  width: 60%;
+  text-align: center;
+  margin-left: 360px;
+}
+
+.scrollmenu a {
+  display: inline-block;
+  color: #F6F6F6;
+  text-align: center;
+  text-decoration: none;
+}
+
+.scrollmenu a:hover {
+  background-color: #777;
+}
+
+.salon_slika {
+  width: 15%;
+  height: 15%;
+  padding-right: 50px;
+}
+
+.Kontakt {
+  margin-top: -40px;
+  font-size: 18pt;
+  text-align: center;
+}
+
+.button {
+  border-radius: 8px;
+  font-family: 'Spline Sans Mono', monospace;
+  color: #595B83;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  border-style: none;
+  background: #FFC7C7;
+  margin-top: -60px;
+  width: 80px !important;
+  text-align: center !important;
+  margin-bottom: 30px;
+}
+
+.btn:hover {
+  background: #f4abc5;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #595B83;
+  font-size: 12px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-family: 'Spline Sans Mono', monospace;
+  padding-bottom: 30px;
+}
+
+.footer {
+  margin-top: -30px;
+  background-color: #FFC7C7 !important;
+  text-align: center;
+}
+
+.socials {
+  width: 60px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hr1 {
+  border: none;
+  height: 20px;
+  width: 90%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #1f1209;
+  box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px;
+}
+
+/*REGISTRACIJA*/
+.centarRegistracija {
+  font-size: 11pt;
+}
+
+.prviRed, .drugiRed, .treciRed {
+  padding-top: 10px;
+  font-family: 'Spline Sans Mono', monospace;
+  font-size: 12pt;
+}
+
+.formaZaRegistraciju {
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: auto;
+  border: 2px solid;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 6px 4px grey;
+}
+
+table tr td {
+  width: 200px;
+}
+
+.formaZaRegistraciju tr, .formaZaRegistraciju tr td, .formaZaRegistraciju1 tr td, .formaZaRegistraciju tr,
+.formaZaRegistraciju2 tr td, .formaZaRegistraciju2 tr, .formaZaRegistraciju3 tr, .formaZaRegistraciju3 tr td {
+  padding: 5px 10px;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block
+}
+
+input[type=text], input[type=password], input[type="number"], select, input[type="time"] {
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.formaZaRegistraciju1 {
+  display: inline-block;
+  width: 600px;
+  margin-right: auto;
+  border: 2px solid;
+  border: 1px solid;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: 6px 4px grey;
+}
+
+.formaZaRegistraciju2 {
+  display: inline-block;
+  margin-right: auto;
+  border: 2px solid;
+  border: 1px solid;
+  padding: 10px;
+  margin-top: 20px;
+  width: 500px;
+  margin-left: 20px;
+  box-shadow: 6px 4px grey;
+}
+
+.formaZaRegistraciju3 {
+  display: inline-block;
+  margin-right: auto;
+  border: 2px solid;
+  border: 1px solid;
+  padding: 10px;
+  margin-top: 20px;
+  width: 950px;
+  margin-left: 20px;
+  box-shadow: 6px 4px grey;
+}
+
+.divRegistracija {
+  height: 515px;
+  overflow-y: scroll;
+}
+
+.divCentar {
+  background-color: white;
+}
+
+.centar {
+  min-height: 550px;
+  background-color: #FFE2E2;
+}
+
+/* za slucaj da ostavimo prazno kod admina
+.prazna{
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+*/
+
+/*Error massege*/
+.error {
+  color: #D8000C;
+
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,53 @@
+CRITICAL - 2022-05-30 12:02:51 --> Undefined variable $registracija
+#0 C:\wamp64\www\PSI_final\app\Controllers\Gost.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\wamp64\www\PSI_final\app\Controllers\Gost.php(27): App\Controllers\Gost->prikaz()
+#2 C:\wamp64\www\PSI_final\system\CodeIgniter.php(832): App\Controllers\Gost->index()
+#3 C:\wamp64\www\PSI_final\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 C:\wamp64\www\PSI_final\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 C:\wamp64\www\PSI_final\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\wamp64\www\PSI_final\system\Commands\Server\rewrite.php(43): require_once('...')
+#7 {main}
+CRITICAL - 2022-05-30 12:24:02 --> Invalid file: sabloni/header_korisnik.php
+#0 C:\wamp64\www\PSI_final\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 C:\wamp64\www\PSI_final\system\Common.php(1089): CodeIgniter\View\View->render()
+#2 C:\wamp64\www\PSI_final\app\Controllers\Korisnik.php(16): view()
+#3 C:\wamp64\www\PSI_final\app\Controllers\Korisnik.php(35): App\Controllers\Korisnik->prikaz()
+#4 C:\wamp64\www\PSI_final\system\CodeIgniter.php(832): App\Controllers\Korisnik->logout()
+#5 C:\wamp64\www\PSI_final\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\wamp64\www\PSI_final\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\wamp64\www\PSI_final\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\PSI_final\system\Commands\Server\rewrite.php(43): require_once('...')
+#9 {main}
+CRITICAL - 2022-05-30 12:24:08 --> Invalid file: sabloni/header_korisnik.php
+#0 C:\wamp64\www\PSI_final\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 C:\wamp64\www\PSI_final\system\Common.php(1089): CodeIgniter\View\View->render()
+#2 C:\wamp64\www\PSI_final\app\Controllers\Korisnik.php(16): view()
+#3 C:\wamp64\www\PSI_final\app\Controllers\Korisnik.php(24): App\Controllers\Korisnik->prikaz()
+#4 C:\wamp64\www\PSI_final\system\CodeIgniter.php(832): App\Controllers\Korisnik->index()
+#5 C:\wamp64\www\PSI_final\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\wamp64\www\PSI_final\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\wamp64\www\PSI_final\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\PSI_final\system\Commands\Server\rewrite.php(43): require_once('...')
+#9 {main}
+CRITICAL - 2022-05-30 12:24:43 --> Invalid file: stranice/centar_korisnik.php
+#0 C:\wamp64\www\PSI_final\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 C:\wamp64\www\PSI_final\system\Common.php(1089): CodeIgniter\View\View->render()
+#2 C:\wamp64\www\PSI_final\app\Controllers\Korisnik.php(17): view()
+#3 C:\wamp64\www\PSI_final\app\Controllers\Korisnik.php(24): App\Controllers\Korisnik->prikaz()
+#4 C:\wamp64\www\PSI_final\system\CodeIgniter.php(832): App\Controllers\Korisnik->index()
+#5 C:\wamp64\www\PSI_final\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\wamp64\www\PSI_final\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\wamp64\www\PSI_final\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\PSI_final\system\Commands\Server\rewrite.php(43): require_once('...')
+#9 {main}
+CRITICAL - 2022-05-30 18:25:59 --> Invalid file: stranice/promena_loznike.php
+#0 C:\wamp64\www\PSI_final\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 C:\wamp64\www\PSI_final\system\Common.php(1089): CodeIgniter\View\View->render()
+#2 C:\wamp64\www\PSI_final\app\Controllers\Gost.php(16): view()
+#3 C:\wamp64\www\PSI_final\app\Controllers\Gost.php(27): App\Controllers\Gost->prikaz()
+#4 C:\wamp64\www\PSI_final\system\CodeIgniter.php(832): App\Controllers\Gost->index()
+#5 C:\wamp64\www\PSI_final\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\wamp64\www\PSI_final\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\wamp64\www\PSI_final\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\PSI_final\system\Commands\Server\rewrite.php(43): require_once('...')
+#9 {main}
