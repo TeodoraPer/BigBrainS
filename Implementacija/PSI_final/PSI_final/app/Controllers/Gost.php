@@ -1,7 +1,8 @@
 <?php
+// Aleksandra Dragojlovic 0409/19 funkcionalnost promena lozinke
 
 namespace App\Controllers;
-use App\Models\RegistrovaniKorisnikModel;
+use App\Models\RegKorisnikModel;
 use App\Models\KorisnikMenadzerModel;
 
 
@@ -56,5 +57,47 @@ class Gost extends BaseController
      public function registracijaSubmitSalon(){ 
       
     }
+
+
+    // Aleksandra Dragojlovic 0409/19
+    public function promenaLozinke($poruka=null){
+        
+     return $this->prikaz('promena_lozinke', ['poruka'=>$poruka]);
+  
+ }
+
+ // Aleksandra Dragojlovic 0409/19
+ public function promenaLozinkeObrada(){
+
+     $korIme=$this->request->getVar('korIme');
+     $staraLoz=$this->request->getVar('staraLoz');
+     $novaLoz=$this->request->getVar('novaLoz');
+     $potvrdaLoz=$this->request->getVar('potvrdaLoz');
+     $regKorisnikModel=new RegKorisnikModel();
+     
+     $regKorisnik=$regKorisnikModel->nadjiPrekoKorIme($korIme);
+     
+     if($regKorisnik==null)
+         
+         return $this->prikaz('promena_lozinke',['errors'=>['korIme'=>"Korisnik ne postoji!"]]);
+     if($regKorisnik->jeObrisan!=0 && $regKorisnik->jeObrisan!=NULL){
+         return $this->prikaz('promena_lozinke',['errors'=>['korIme'=>"Korisnik ne postoji!"]]);
+     }
+     if(($regKorisnik->lozinka)!=$staraLoz)
+         return $this->prikaz('promena_lozinke',['errors'=>['staraLoz'=>"Neispravna vrednost stare lozinke!"]]);
+     if($novaLoz!=$potvrdaLoz){
+       return $this->prikaz('promena_lozinke',['errors'=>['potvrdaLoz'=>"Nova lozinke i potvrda nisu iste!"]]);
+
+     }
+     
+
+     $upit_data = [
+         'lozinka' => $novaLoz
+     ];
+     $regKorisnikModel->update($regKorisnik->IdRK, $upit_data);
+     
+     return $this->promenaLozinke("Lozinka je uspešno promenjena!");
+
+ }
     
 }
