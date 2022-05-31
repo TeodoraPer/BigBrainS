@@ -17,10 +17,6 @@ class RegKorisnikModel extends Model{
     public function nadjiPrekoKorIme($korIme){
         return $this->where('korisnickoIme',$korIme)->where('jeOdobrenZahtevZaRegistraciju',1)->first();
     }
-    
-    
-    
-    
 
 }
 
