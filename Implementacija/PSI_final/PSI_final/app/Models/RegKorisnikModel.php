@@ -170,6 +170,78 @@ class RegKorisnikModel extends Model{
             $salonModel=new SalonModel();
             $salonModel->ubaciSalon($id,$data,$path);
     }
+
+      /**
+     * Teodora Peric 0283/18
+     * 
+     * pronalazak svih korisnika koji cekaju na odobravanje zahteva za registraciju
+     * 
+   */
+  function nadjiKorisnikeZaZahtevZaRegistraciju(){
+    $db = \Config\Database::connect();
+    $record = $db->table('registrovanikorisnik');
+          
+    $record->where('jeOdobrenZahtevZaRegistraciju',NULL);
+    $query = $record->get();
+    $result = $query->getResult('object');
+    return $result;
+ }
+ 
+      /**
+ * Teodora Peric 0283/18
+ * 
+ * odobravanje registracije konkretnom korisniku
+ * 
+*/
+ function odobriKorisnika($IdRK){
+    $db = \Config\Database::connect();
+    $record = $db->table('registrovanikorisnik');
+          
+    $record->where('IdRK',$IdRK);
+    $query = $record->get();
+    $result = $query->getFirstRow('object');
+    if($result->jeOdobrenZahtevZaRegistraciju==NULL){ 
+        $result->jeOdobrenZahtevZaRegistraciju=1;
+        $this->postaviJeOdobrenZahtevZaRegistraciju($IdRK,1);
+       
+    }
+ }
+ 
+/**
+ * Teodora Peric 0283/18
+ * 
+ * odbijanje registracije konkretnom korisniku
+ * 
+*/
+ function odbijKorisnika($IdRK){ 
+    $db = \Config\Database::connect();
+    $record = $db->table('registrovanikorisnik');
+          
+    $record->where('IdRK',$IdRK);
+    $query = $record->get();
+    $result = $query->getFirstRow('object');
+    if($result->jeOdobrenZahtevZaRegistraciju==NULL){ 
+        $result->jeOdobrenZahtevZaRegistraciju=0;
+        $this->postaviJeOdobrenZahtevZaRegistraciju($IdRK,0);
+        return "Uspešno ste odbili zahtev korisnika!";
+    }
+ }
+ 
+ /**
+  * Teodora Peric 0283/18 postavljanje flega jeOdobrenZahtevZaRegistraciju na 1 ili 0
+  * @param type $IdRK
+  * @param type $vrednost
+  */
+ function postaviJeOdobrenZahtevZaRegistraciju($IdRK,$vrednost){
+    $data = [
+       'jeOdobrenZahtevZaRegistraciju' => $vrednost
+    ];
+    $db = \Config\Database::connect();
+    $recorder = $db->table('registrovanikorisnik');
+    $recorder->where('IdRK', $IdRK);
+    $recorder->update($data);
+     
+ }
     
 }
 

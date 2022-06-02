@@ -38,10 +38,7 @@ class Administrator extends BaseController
     {   
         $this->prikaz('centar_administrator', []);
     }
-      public function zahtevi_za_registraciju()
-    {   
-        $this->prikaz('centar_administrator', []);
-    }
+      
 
 
     /**
@@ -70,11 +67,81 @@ class Administrator extends BaseController
       }
       return $this->brisanje_naloga();
   }
+    /**
+     * Teodora Peric 0283/18 funckionalnost za odobravanje ili odbijanje zahteva za registraciju
+     * podrazumeva da se klikom na link zahtevi za reg prikazuje tabela ili poruka da nema vise
+     * zahteva
+     * @return type
+     */
+    public function zahtevi_za_registraciju($poruka=null)
+    {   
+      $regKor = new RegKorisnikModel();   
+     
+        $data = [
+            'users' => $regKor->where('jeOdobrenZahtevZaRegistraciju',NULL)->paginate(6),
+            'pager' => $regKor->pager,
+            'poruka'=>$poruka
+        ];
+       $db = \Config\Database::connect();
+       $record = $db->table('registrovanikorisnik');
+       $record->where('jeOdobrenZahtevZaRegistraciju',NULL);
+       $query = $record->get();
+       $result = $query->getFirstRow('object');
+       if($result!=null){
+        
+            $data['controller']='Administrator';
+         return view ('stranice/paginacijaAdministrator', $data);  
+      }          
+      return $this->prikaz('admin_ZahtevZaRegistracijuPraznaTabela', ['poruka'=>'Trenutno nema nijednog neobrđenog zahteva!','korisnici'=>null]);
+    }
+  
+    
+    /**
+     * Teodora Peric 0283/18 odobravanje zahteva za registrsaciju korisniku i ispis poruke o uspesnosti
+     * @param @IdRK
+     * @return type
+     */
+    function odobriKorisnika($IdRK)
+    { 
+      $regKorisnikModel = new RegKorisnikModel();
+      $regKorisnikModel->odobriKorisnika($IdRK);
+     
+      return $this->zahtevi_za_registraciju("Uspešno ste odobrili zahtev korisnika!");
+    }
+    
+    
+     /**
+     * Teodora Peric 0283/18 odbijanje zahteva za registrsaciju korisniku i ispis poruke o uspesnosti
+     * @param @IdRK
+     * @return type
+     */
+    function odbijKorisnika($IdRK)
+    { 
+      $regKorisnikModel = new RegKorisnikModel();
+      $regKorisnikModel->odbijKorisnika($IdRK);
+      
+      return  $this->zahtevi_za_registraciju("Uspešno ste odbili zahtev korisnika!");
+    }
+  
+    function posaljiMejl(){ 
+        $email = \Config\Services::email();
+        $config['protocol'] = 'sendmail';
+        $config['mailPath'] = '/usr/sbin/sendmail';
+        $config['charset']  = 'iso-8859-1';
+        $config['wordWrap'] = true;
+
+$email->initialize($config);
+$email->setFrom('la.dr.steva@gmail.com', 'Your Name');
+$email->setTo('teodoraperic11041999@gmail.com');
+
+$email->setSubject('Email Test');
+$email->setMessage('Testing the email class.');
+
+$email->send();
+    }
+   
+
+
 }
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 
