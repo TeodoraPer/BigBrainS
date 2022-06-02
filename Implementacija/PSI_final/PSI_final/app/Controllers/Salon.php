@@ -33,8 +33,13 @@ class Salon extends BaseController
     public function pregled_usluga(){ 
          $this->prikaz('centar_salon', []);
     }
+    /**
+     * Aleksandra Dragojlovic 0409/19
+     * Odjavljivanje
+     */
     public function logout(){ 
-         $this->prikaz('centar_salon', []);
+        $this->session->destroy();
+        return redirect()->to(site_url('/'));
     }
    
 	

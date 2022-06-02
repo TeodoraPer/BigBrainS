@@ -33,10 +33,16 @@ class Administrator extends BaseController
     {   
         $this->prikaz('centar_administrator', []);
     }
-    
+    /**
+     * Aleksandra Dragojlovic 0409/19 
+     * 
+     * Odjavljivanje
+     */
       public function logout()
     {   
-        $this->prikaz('centar_administrator', []);
+      $this->session->destroy();
+      return redirect()->to(site_url('/'));
+      
     }
       
 

@@ -38,11 +38,11 @@
               <nav class="navbar navbar-expand-sm " >
                 <form class="form-inline" style="display:inline ;">
                   <div class="btn-group">
-                   <button class="dugme2"> <a class="linkNavBar " href="#">Početna</a></button>
-                   <button class="dugme"><a class="linkNavBar" href="#">Pregled salona</a></button>
-                   <button class="dugme"><a class="linkNavBar" href="#">Pregled usluga</a></button>
-                   <button class="dugme"><a class="linkNavBar" href="#">Registracija</a></button>
-                   <button class="dugme1"><a class="linkNavBar" href="#">Login</a></button>
+                    <button class="dugme2"> <a class="linkNavBar " href="<?= site_url("Gost/index")?>">Početna</a></button>
+                   <button class="dugme"><a class="linkNavBar" href="<?= site_url("Gost/pregled_salona")?>">Pregled salona</a></button>
+                   <button class="dugme"><a class="linkNavBar" href="<?= site_url("Gost/pregled_usluga")?>">Pregled usluga</a></button>
+                   <button class="dugme"><a class="linkNavBar" href="<?= site_url("Gost/registracija")?>">Registracija</a></button>
+                   <button class="dugme1"><a class="linkNavBar" href="<?= site_url("Gost/login")?>"">Login</a></button>
                   </div>
 
               </form>

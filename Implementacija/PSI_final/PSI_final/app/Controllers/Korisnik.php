@@ -38,8 +38,14 @@ class Korisnik extends BaseController
     public function pregled_usluga(){ 
          $this->prikaz('centar_ulogovaniKorisnik', []);
     }
+    /**
+     * Aleksandra Dragojlovic 0409/19 
+     * 
+     * Odjavljivanje
+     */
     public function logout(){ 
-         $this->prikaz('centar_ulogovaniKorisnik', []);
+        $this->session->destroy();
+        return redirect()->to(site_url('/'));
     }
 	
     
@@ -174,7 +180,7 @@ class Korisnik extends BaseController
      $sadrziModel = new SadrziModel();
      $tretmanModel=new TretmanModel();
      $korisnikModel=new KorisnikMenadzerModel();
-     $korisnik = $this->session->get('korisnik');
+     $korisnik = $this->session->get('ulogovaniKorisnik');
      
      $informacije=$tretmanModel->izlistajIstorijuUsluga($korisnik);
      if($informacije==null) {
@@ -237,7 +243,7 @@ class Korisnik extends BaseController
         $korisnikModel=new KorisnikMenadzerModel();
       
         $novaOcena = $this->request->getVar('ocena');
-        $korisnik = $this->session->get('korisnik');
+        $korisnik = $this->session->get('ulogovaniKorisnik');
 
         $staraOcena = $ocenio->dodajOcenio($IdSalon, $IdTretman, $korisnik->IdRK, $novaOcena);
         if($staraOcena!=0){
@@ -273,7 +279,7 @@ class Korisnik extends BaseController
      */
     public function recenzija($IdSalon,$naziv,$IdTretman){
         $korisnikModel=new KorisnikMenadzerModel();
-        $korisnik = $this->session->get('korisnik');
+        $korisnik = $this->session->get('ulogovaniKorisnik');
 
         $sadrzaj = $this->request->getVar('recenzija');
         if($sadrzaj==null){

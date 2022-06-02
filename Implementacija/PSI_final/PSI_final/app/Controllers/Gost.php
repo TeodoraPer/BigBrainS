@@ -35,7 +35,7 @@ promene u klasi Routes da bi se ovo omogućilo
 
     public function index() {
 
-        $this->prikaz('promena_lozinke', []);
+        $this->prikaz('centar_gost', []);
     }
 
     public function pregled_salona() {
