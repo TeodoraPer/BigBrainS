@@ -35,6 +35,7 @@ class TretmanModel extends Model{
         $builder->select('salon.ukupanZbirOcena as zbirOcena');
         $builder->select('tretman.DatumVreme');
         $builder->where('IdKorisnik',$korisnik->IdRK);
+        $builder->where('jePotvrdjenKrajUsluge',1);
         $query = $builder->get();
         $result = $query->getResult();
         return $result;

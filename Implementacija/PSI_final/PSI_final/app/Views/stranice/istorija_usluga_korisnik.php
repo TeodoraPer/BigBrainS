@@ -9,7 +9,7 @@
         <div class="sredina">
             <br>
 
-            <?php if(isset($poruka)) echo $poruka;?>
+            <?php if(isset($poruka)) echo "<div class='poruka0409'>{$poruka}</div>";?>
 
             <?php
             /**
@@ -40,7 +40,15 @@
 
                     echo "<tr><td class='align-middle'>{$ocena}</td><td class='align-middle'>{$informacija->naziv}</td>";
 
-                    echo "<td class='align-middle'>{$informacija->DatumVreme}</td>"
+                    $niz=(str_split($informacija->DatumVreme));
+                    $godina=$niz[0]."".$niz[1]."".$niz[2]."".$niz[3];
+                    $mesec=$niz[5]."".$niz[6];
+                    $dan=$niz[8]."".$niz[9];
+                    $sat=$niz[11]."".$niz[12];
+                    $minut=$niz[14]."".$niz[15];
+                    echo "<td class='align-middle'>";
+                    echo $mesec."/".$dan."/".$godina." ".$sat.":".$minut;
+                    echo "</td>"
                     . "<td class='align-middle'>";
 
                     for($j=$ukupno;$j<$ukKolT;$j++){
