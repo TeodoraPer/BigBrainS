@@ -26,7 +26,7 @@
   margin-top: -30px;
 }
 .navbar {
-  margin-left: 25%;
+  margin-left: 350px;
   margin-top: -125px;
   font-family: 'Spline Sans Mono', monospace;
   font-size: 14pt;
@@ -118,6 +118,168 @@
 
 
 
+/*Registracija*/
+.button3{
+  border-radius: 8px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:white;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  border-style: none;
+  background: #595B83;
+  margin-top: -60px;
+  width: 200px !important;
+  text-align: center !important;
+ margin-bottom: 30px;
+}
+
+.registracija{
+  background:#FFC7C7;
+  border-radius:5px;
+  box-shadow:0px 0px 5px #595B83;
+
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+ height:620px;
+  width: 430px;
+  font-size: 10pt;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sredina{
+  font-size: 16px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  text-align: center;
+  margin-top: 30px ;
+}
+
+.registracijaSalon2{ background:#FFC7C7;
+  border-radius:5px;
+  box-shadow:0px 0px 5px #595B83;
+
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+ height:100px;
+  width:410px;
+  font-size: 10pt;
+ }
+
+  .registracijaSalon3{
+    background:#FFC7C7;
+    border-radius:5px;
+    box-shadow:0px 0px 5px #595B83;
+    font-size: 16px;
+    font-family: 'Spline Sans Mono', monospace;
+    color:#595B83;
+   height:240px;
+    width:470px;
+    font-size: 10pt;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .registracijaSalon4{
+    background:#FFC7C7;
+    border-radius:5px;
+    box-shadow:0px 0px 5px #595B83;
+    font-size: 16px;
+    font-family: 'Spline Sans Mono', monospace;
+    color:#595B83;
+   height:210px;
+    width: 590px !important;
+    font-size: 10pt;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.registracijaSalon{
+  background:#FFC7C7;
+  border-radius:5px;
+  box-shadow:0px 0px 5px #595B83;
+  font-size: 16px;
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+ height:500px;
+  width: 410px;
+  font-size: 10pt;
+  margin-top: 50px;
+  margin-left: 160px;
+  margin-right: auto;
+}.inpt3{
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  width: 230px;
+  height: 30px;
+  margin-left: -310px;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  background-color: white !important;
+}
+.inpt4{
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  width: 60px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  background-color: white !important;
+}
+
+
+.inpt2{
+  font-family: 'Spline Sans Mono', monospace;
+  color:#595B83;
+  width: 100px;
+  height:30px;
+  margin-left: 10px;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  background-color: white !important;
+}
+
+.dodajSliku{font-family: 'Spline Sans Mono', monospace; 
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+  color:#595B83;
+  width: 100px;
+  text-align:center;margin-top: -30px;
+  background-color: white; margin-left:150px;
+}
+#inputTag{ display: none;  width: 300px;height: 300px;}
+#idlabel{
+  cursor:pointer;
+}
+#imageName{
+  color:green;
+}
+
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 
 
 
@@ -193,6 +355,7 @@
   color:#595B83;
   width: 260px;
   height: 40px;
+  text-align: right !important;
   border-radius:10px;
   box-shadow:0px 0px 10px #000;
   background-color: white !important;
@@ -204,7 +367,7 @@
   font-size: 16px;
   font-family: 'Spline Sans Mono', monospace;
   color:#595B83;
- height: 480px;
+ height: 440px;
   width: 570px;
   font-size: 16px;
   margin-top: 50px;
@@ -242,11 +405,11 @@
 }
 
 .desno{ 
-text-align: left;
-font-weight: bolder;
+  margin-left: -20px !important;
+text-align: left !important;
 }
 .levo{ 
-text-align: left !important;
+text-align: right !important;
 }
 
 .tabela{ 
@@ -261,21 +424,35 @@ text-align: left !important;
 }
 .porukica{ 
   margin-top: 10px;
-  font-size: 10pt;
+  font-size: 9pt;
   text-align: center;
-
+  
 }
 .porukica1{ 
   margin-left: -200px;
   font-size: 10pt;
   text-align: center;
 }
+.porukica2{ 
+  margin-left: -200px;
+  font-size: 8pt;
+  text-align: center !important;
+ margin-left: -50px !important;
+}
 
-
-
+.porukica3{ 
+    background-color:  #7C0A02 !important;
+     font-size: 10pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+     margin-left:70px;
+     margin-right: 70px;
+}
 
 /*Futer*/
-
+.divFuter{ 
+  margin-top: -10px;
+}
 
 /*Pavlov futer*/
 .flavor_text {
@@ -419,9 +596,7 @@ table tr td {
   display: block
 }
 
-input[type=text], input[type=password], input[type="number"], select, input[type="time"] {
-  background: #f1f1f1;
-}
+
 
 input[type=text]:focus, input[type=password]:focus {
   background-color: #f1f1f1;

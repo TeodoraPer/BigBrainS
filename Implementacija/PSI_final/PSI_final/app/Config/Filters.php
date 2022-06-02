@@ -23,6 +23,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'gost'=>\App\Filters\GostFilter::class
     ];
 
     /**
@@ -64,5 +65,6 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = [];
+    public $filters = [
+       'gost'=>['before'=>['Gost/poslatZahtevZaRegistraciju']]    ];
 }

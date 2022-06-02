@@ -12,7 +12,7 @@ class UslugaModel extends Model{
     protected $primaryKey = 'IdUsluga';
     protected $returnType = 'object';
     
-    protected $allowedFields = ['naziv'];
+    protected $allowedFields = ['Naziv'];
    
     /**
      * Aleksandra Dragojlovic 0409/19 
@@ -35,7 +35,23 @@ class UslugaModel extends Model{
         $result = $query->getResult();
         return $result;
     }
-        
+         /**
+    * Teodora Peric 0283/18 dohvatanje Id-a usluge sa zadatim nazivom
+    * @param type $naziv
+    * @return IdUsluga
+    */  
+   function pronadjiIdUslugePoNazivu($naziv){ 
+    $db = \Config\Database::connect();
+    $record = $db->table('usluga');  
+    $record->where('Naziv',$naziv);
+
+    $query = $record->get();
+    $result = $query->getFirstRow('object');
+    return $result;
+}
+public function __get(string $name) {
+   parent::__get($name);
+}
     
 
 }

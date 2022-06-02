@@ -76,6 +76,100 @@ class RegKorisnikModel extends Model{
         $builder->where('IdRK', $IdRK);
         $builder->update($data);
     }
+   
+      /**
+     * Teodora Peric 0283/18
+     * 
+     * provera da li vrednost $parametar postoji u tabeli u koloni koja predstavlja
+       * promenljivu $vrednost
+     * @object
+    
+     */
+    public function pronadjiRegKorisnikaPoParametru($parametar, $vrednost){
+        $db = \Config\Database::connect();
+       $record = $db->table('registrovanikorisnik');
+       $record->select('*');         
+       $record->where($parametar,$vrednost);
+  
+       $query = $record->get();
+       $result = $query->getResult();
+       return $result;
+   }
+   
+     /**
+      *  Teodora Peric 0283/18
+      * 
+      * ubacivanje korisnika u tabelu KorisnikMenadzer i registrovaniKorisnik
+    
+      * @param type $data
+      */
+     function ubaciKorisnika($data){ 
+         $db = \Config\Database::connect();
+         $record =$this->db->table('registrovanikorisnik');
+         $data1 = [
+             'korisnickoIme'=>trim($data->getVar('korisnickoImeKorisnik')),
+             'email'=>trim($data->getVar('emailKorisnik')),
+             'tipKorisnika'=>'K',
+             'lozinka'=>trim($data->getVar('lozinkaKorisnik')),
+             'brojTelefona'=>trim($data->getVar('brojTelefonaKorisnik')),
+             'adresa'=>trim($data->getVar('adresaKorisnik'))
+               ];
 
+                $record->insert($data1);
+                $id=$this->db->insertID();
+               
+               $korisnikMenadzer=new KorisnikMenadzerModel();
+              $korisnikMenadzer->ubaciKorisnika($id,$data);
+           }
+           
+  /**
+    * Teodora Peric 0283/18
+    * 
+    * ubacivanje korisnika u tabelu KorisnikMenadzer i registrovaniKorisnik
+    * 
+  */
+     function ubaciMenadzer($data){ 
+         $db = \Config\Database::connect();
+         $record =$this->db->table('registrovanikorisnik');
+         $data1 = [
+             'korisnickoIme'=>trim($data->getVar('korisnickoImeMenadzer')),
+             'email'=>trim($data->getVar('emailMenadzer')),
+             'tipKorisnika'=>'A',
+             'lozinka'=>trim($data->getVar('lozinkaMenadzer')),
+             'brojTelefona'=>trim($data->getVar('brojTelefonaMenadzer')),
+             'adresa'=>trim($data->getVar('adresaMenadzer'))
+               ];
+
+                $record->insert($data1);
+                $id=$this->db->insertID();
+               
+               $korisnikMenadzer=new KorisnikMenadzerModel();
+               $korisnikMenadzer->ubaciMenadzera($id,$data);
+           }
+           
+    /**
+    * Teodora Peric 0283/18
+    * 
+    * ubacivanje salona u tabelu Salon i registrovaniKorisnik
+    * 
+  */
+      function ubaciSalon($data,$path){ 
+           $db = \Config\Database::connect();
+           $record =$this->db->table('registrovanikorisnik');
+           $data1 = [
+             'korisnickoIme'=>trim($data->getVar('korisnickoImeSalon')),
+             'email'=>trim($data->getVar('emailSalon')),
+             'tipKorisnika'=>'S',
+             'lozinka'=>trim($data->getVar('lozinkaSalon')),
+             'brojTelefona'=>trim($data->getVar('brojTelefonaSalon')),
+             'adresa'=>trim($data->getVar('adresaSalon'))
+               ];
+            $record->insert($data1);
+            $id=$this->db->insertID();
+        
+            $salonModel=new SalonModel();
+            $salonModel->ubaciSalon($id,$data,$path);
+    }
+    
 }
 
