@@ -3,6 +3,7 @@
     Perić Teodora 0283/18
    */
 namespace App\Controllers;
+use App\Models\RegKorisnikModel;
 
 class Administrator extends BaseController
 {

@@ -132,19 +132,74 @@ class SalonModel  extends Model {
             $idUsluga=$uslugaModel->pronadjiIdUslugePoNazivu($izbor)->IdUsluga;
             $cenaUslugeModel->ubaciCeneZaUsluguSalona($id, $idUsluga, $cenaVeliki, $cenaMali, $cenaSrednji);
             }
+        }
     }
     
-}
 
-        function izvuciSliku($id){ 
-             $db = \Config\Database::connect();
-         $record = $db->table('salon');  
+
+    function izvuciSliku($id){ 
+        $db = \Config\Database::connect();
+        $record = $db->table('salon');  
         $record->where('IdSalon',$id);
-   
+
         $query = $record->get();
         $result = $query->getFirstRow('object');
         return $result;
-        }
+    }
+
+    /**
+     * Aleksandra Dragojlovic 0409/19 
+     * 
+     * beleženje u bazi nove ocene salona
+     * koristi se prilikom ocenjivanja salona
+     * 
+     * @param type $IdSalon
+     * @param type $novaOcena
+     */
+    public function uvecajZbirOcena($IdSalon,$novaOcena){
+        
+        $db = \Config\Database::connect();
+        $builder = $db->table('salon');
+        $builder->where('IdSalon', $IdSalon);        
+        $query = $builder->get();
+        $salon = $query->getFirstRow('object');   
+        $data = array(
+            'brojOcena' => $salon->brojOcena+1,
+            'ukupanZbirOcena' => $salon->ukupanZbirOcena+$novaOcena
+        );
+        
+        $builder1 = $db->table('salon');
+        $builder1->where('IdSalon', $IdSalon);
+        $builder->update($data);
+    }
+    
+    /**
+     * Aleksandra Dragojlovic 0409/19 
+     * 
+     * beleženje u bazi izmenu ocene salona
+     * koristi se prilikom ocenjivanja salona
+     * 
+     * @param type $IdSalon
+     * @param type $staraOcena
+     * @param type $novaOcena
+     */
+    public function azurirajZbirOcena($IdSalon,$staraOcena,$novaOcena){
+        $db = \Config\Database::connect();
+        $builder = $db->table('salon');
+        $builder->where('IdSalon', $IdSalon);
+        
+        $query = $builder->get();
+        $salon = $query->getFirstRow('object');
+        $data = array(
+            
+            'ukupanZbirOcena' => $salon->ukupanZbirOcena-$staraOcena+$novaOcena
+        );
+        $builder1 = $db->table('salon');
+        $builder1->where('IdSalon', $IdSalon);
+        $builder->update($data);
+        
+        
+    }
 
 
-            }
+}
