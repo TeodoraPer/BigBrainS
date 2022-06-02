@@ -11,7 +11,7 @@
     <div class="col-sm-10 centar">
         <br>
         <?php
-        if(isset($poruka)) echo $poruka;
+        if(isset($poruka)) echo "<div class='poruka0409'>{$poruka}</div>";
          ?>
         <br>
         <?php
