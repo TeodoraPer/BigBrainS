@@ -430,7 +430,7 @@ text-align: right !important;
 }
 .porukica1{ 
   margin-left: -200px;
-  font-size: 16pt;
+  font-size: 10pt;
   text-align: center;
 }
 .porukica2{ 
@@ -442,7 +442,7 @@ text-align: right !important;
 
 .porukica3{ 
     background-color:  #7C0A02 !important;
-     font-size: 16pt;
+     font-size: 10pt;
     padding-top: 10px;
     padding-bottom: 10px;
      margin-left:70px;
@@ -990,15 +990,4 @@ input.cekbox7{
 }
 .sredina_0409{
     text-align: center;
-}
-.poruka0409{
-  
-  text-align: center;
-  
-  font-weight: bold;
-  color: #595B83;
-  font-family: 'Spline Sans Mono';
-  
-  font-size: 18px;
-
 }
