@@ -5,7 +5,7 @@
 
     </div>
     <div class="col-sm-10 centar" >
-        <div class="sredina">                 
+        <div class="">                 
             <form method="post" action="<?= site_url("$controller/pretragaPoUslugama") ?>">
 
                 <br>

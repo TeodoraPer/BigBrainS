@@ -42,9 +42,6 @@ class Korisnik extends BaseController
          $this->prikaz('centar_ulogovaniKorisnik', []);
     }
 	
-	 public function istorija_usluga() {
-        $this->prikaz('centar_ulogovaniKorisnik', []);
-    }
     
     public function zakazivanje_tretmana($poruka = null) {
         $this->prikaz('centar_zakazivanjeTretmana_1', ['poruka' => $poruka]);

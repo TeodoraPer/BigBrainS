@@ -4,6 +4,9 @@
    */
 namespace App\Controllers;
 
+use App\Models\TretmanModel;
+use App\Models\RegKorisnikModel;
+
 class Salon extends BaseController
 {
     /*
@@ -33,9 +36,7 @@ class Salon extends BaseController
     public function logout(){ 
          $this->prikaz('centar_salon', []);
     }
-    public function potvrda_kraja_usluge(){ 
-         $this->prikaz('centar_salon', []);
-    }
+   
 	
 	//Anastasija Volčanovska 0092/2019 fje za potvrdu kraja usluge (prikaz i sama potvrda)
 

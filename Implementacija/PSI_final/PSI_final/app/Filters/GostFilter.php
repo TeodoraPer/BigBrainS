@@ -17,8 +17,8 @@ class GostFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         $session=session();
-        if(!$session->has('trenutniMejlZaSlanjePotvrdeORegistraciji'))
-            return redirect()->to(site_url('Gost/registracija'));
+      /*  if(!$session->has('trenutniMejlZaSlanjePotvrdeORegistraciji'))
+            return redirect()->to(site_url('Gost/registracija'));*/
 		if ($session->has('ulogovaniKorisnik')) {
 
             $korisnik = $session->get('ulogovaniKorisnik');

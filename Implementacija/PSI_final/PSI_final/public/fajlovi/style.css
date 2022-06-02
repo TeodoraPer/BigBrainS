@@ -430,19 +430,19 @@ text-align: right !important;
 }
 .porukica1{ 
   margin-left: -200px;
-  font-size: 10pt;
+  font-size: 16pt;
   text-align: center;
 }
 .porukica2{ 
   margin-left: -200px;
-  font-size: 8pt;
+  font-size: 16pt;
   text-align: center !important;
  margin-left: -50px !important;
 }
 
 .porukica3{ 
     background-color:  #7C0A02 !important;
-     font-size: 10pt;
+     font-size: 16pt;
     padding-top: 10px;
     padding-bottom: 10px;
      margin-left:70px;
@@ -681,6 +681,30 @@ hr {
   
 }
 
+.slike1{
+    margin-top:30px;
+    margin-left:80px;
+    text-align:justify;
+}
+
+.slike2{
+    margin-top:30px;
+    margin-left:80px;
+    text-align:justify;
+}
+
+.slike3{
+    margin-top:30px;
+    margin-left:72px;
+    text-align:justify;
+}
+
+.slike4{
+    margin-top:30px;
+    margin-left:125px;
+    text-align:justify;
+}
+
 .slike5{
     margin-top:30px;
     margin-left:100px;
@@ -689,7 +713,7 @@ hr {
 
 .slike6{
     margin-top:30px;
-    margin-left:-5px;
+    margin-left:5px;
     text-align:justify;
 }
 
