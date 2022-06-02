@@ -242,6 +242,20 @@ class RegKorisnikModel extends Model{
     $recorder->update($data);
      
  }
+ /**
+      * Teodora Peric 0283/18 pronalazak korisnika po Id-u
+      * @param $Id
+      */
+      function pronadjiPoIdu($Id){ 
+        $db = \Config\Database::connect();
+     $record = $db->table('registrovanikorisnik');
+           
+     $record->where('IdRK',$Id);
+
+     $query = $record->get();
+     $result = $query->getFirstRow('object');
+     return $result;
+  }
     
 }
 

@@ -14,7 +14,7 @@ class SalonModel  extends Model {
      protected $allowedFields = ['naziv','slika','ponedeljak-petakOD','ponedeljak-petakDO','subotaOD','subotaDO','nedeljaOD'
          ,'nedeljaDO','brojOcena','ukupanZbirOcena','brojUsluga'];
         
-    /**
+    /** Teodora Peric 0283/18
      * Inserotvanje u tabelu Salon uz ubacivanje u tabelu CenaUsluga za svaku od izabranih usluga
      * @param type $id
      * @param type $data
@@ -39,7 +39,7 @@ class SalonModel  extends Model {
                    
                    ];
        
-        /**
+        /** Teodora Peric 0283/18
          * proveravamo koliko ima usluga i za svaku uslugu ubacujemo cene u tabelu cenaUsluga 
          */
         $record->insert($data1);
@@ -136,7 +136,9 @@ class SalonModel  extends Model {
     }
     
 
-
+    /**
+     * Teodora Peric 0283/18
+     * */
     function izvuciSliku($id){ 
         $db = \Config\Database::connect();
         $record = $db->table('salon');  
@@ -200,6 +202,20 @@ class SalonModel  extends Model {
         
         
     }
-
+     /**
+     * Teodora Peric 0283/18 pronalazak salona po Id-u
+     * @param $IdSalon
+     */
+    function pronadjiSalon($IdSalon){ 
+      
+        $db = \Config\Database::connect();
+        $record = $db->table('salon');
+        $record->where('IdSalon', $IdSalon);
+        
+        $query = $record->get();
+        $result = $query->getFirstRow('object');
+        return $result;
+    }
+    
 
 }

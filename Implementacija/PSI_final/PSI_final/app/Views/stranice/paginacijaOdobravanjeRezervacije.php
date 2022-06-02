@@ -29,14 +29,14 @@
               <img class='logo' src="/images/logo2.png">
            
               <nav class="navbar navbar-expand-sm " >
-                <form class="form-inline" style="display:inline ;">
+                 <form class="form-inline" style="display:inline ;">
                   <div class="btn-group">
-                    <button class="dugme2"> <a class="linkNavBar " href="<?= site_url("Administrator/index")?>">Početna</a></button>
-                    <button class="dugme"><a class="linkNavBar" href="<?= site_url("Administrator/pregled_salona")?>">Pregled salona</a></button>
-                    <button class="dugme"><a class="linkNavBar" href="<?= site_url("Administrator/pregled_usluga")?>">Pregled usluga</a></button>
-                    <button class="dugme"><a class="linkNavBar" href="<?= site_url("Administrator/brisanje_naloga")?>">Brisanje naloga</a></button>
-                    <button class="dugme3"><a class="linkNavBar" href="<?= site_url("Administrator/zahtevi_za_registraciju")?>">Zahtevi za registraciju</a></button>
-                    <button class="dugme1"><a class="linkNavBar" href="<?= site_url("Administrator/logout")?>">Logout</a></button>
+                    <button class="dugme2"> <a class="linkNavBar " href="<?= site_url("Salon/index")?>">Početna</a></button>
+                    <button class="dugme"><a class="linkNavBar" href="<?= site_url("Salon/pregled_salona")?>">Pregled salona</a></button>
+                    <button class="dugme"><a class="linkNavBar" href="<?= site_url("Salon/pregled_usluga")?>">Pregled usluga</a></button>
+                    <button class="dugme3"><a class="linkNavBar" href="<?= site_url("Salon/zahtevi_za_rezervaciju")?>">Zahtevi za rezervaciju</a></button>
+                    <button class="dugme3"><a class="linkNavBar" href="<?= site_url("Salon/potvrda_kraja_usluge")?>">Potvrda kraja usluge</a></button>
+                    <button class="dugme1"><a class="linkNavBar" href="<?= site_url("Salon/logout")?>">Logout</a></button>
                   </div>
 
               </form>
@@ -62,25 +62,40 @@
        <table class='table table-striped table-bordered table-light text-center table-hover' style="width:70%; margin:auto">
        
           <tr>
-            <th class='col-sm-2 '>Odobri</th>
+            <th class='col-sm-2 '>Rasa</th>
+            <th class='col-sm-2 '>Velicina</th>
+            <th class='col-sm-2 '>Ime</th>
+            <th class='col-sm-2 '>Datim i vreme</th>
+           <th class='col-sm-2 '>Broj telefona</th>
+           <th class='col-sm-2 '>Odobri</th>
             <th class='col-sm-2 '>Odbij</th>
-            <th class='col-sm-2 '>Korisničko ime</th>
-            <th class='col-sm-2 '>Tip korisnika</th>
-            <th class="col-sm-2">Saznaj više o korisniku</th>
+              <th class='col-sm-2 '>Saznaj više o rezervaciji</th>
           </tr>
       
-          <?php if($users): ?>
-          <?php foreach($users as $user): 
-              if($user->jeOdobrenZahtevZaRegistraciju!=NULL) continue;
+          <?php if($tretmani): ?>
+          <?php foreach($tretmani as $tretman): 
+              if($tretman->jePotvrdjenaRezervacija!=NULL) continue;
               ?>
           <tr>
-            <td><?php   echo anchor("$controller/odobriKorisnika/{$user->IdRK}", "Odobri",'class="button2"');?></td>
-            <td><?php   echo anchor("$controller/odbijKorisnika/{$user->IdRK}", "Odbij",'class="button2"'); ?></td>
-            <td><?php echo $user->korisnickoIme;?></td>
-            <td><?php if($user->tipKorisnika=="A") echo "Menadžer";
-            if($user->tipKorisnika=="K") echo "Korisnik";if($user->tipKorisnika=="S") echo "Salon";
+            <td><?php echo $tretman->rasa;?></td>
+            <td><?php if($tretman->velicina=="M") echo "Mala";
+             if($tretman->velicina=="V") echo "Velika";
+              if($tretman->velicina=="S") echo "Srednja";
             ?></td>
-             <td><?php echo anchor("$controller/saznajVise/{$user->IdRK}", "Saznaj više",'class="button2"'); ?></td>
+            <td><?php echo $tretman->ime;?></td>
+            <td> <?php 
+            $niz=(str_split($tretman->DatumVreme));
+            $godina=$niz[0]."".$niz[1]."".$niz[2]."".$niz[3];
+            $mesec=$niz[5]."".$niz[6];
+            $dan=$niz[8]."".$niz[9];
+            $sat=$niz[11]."".$niz[12];
+            $minut=$niz[14]."".$niz[15];
+            echo $mesec."/".$dan."/".$godina." ".$sat.":".$minut;
+            ?></td>
+            <td><?php echo $tretman->brojTelefona; ?></td>
+            <td><?php   echo anchor("$controller/odobriRezervaciju/{$tretman->IdTretman}", "Odobri",'class="button2"');?></td>
+            <td><?php   echo anchor("$controller/odbijRezervaciju/{$tretman->IdTretman}", "Odbij",'class="button2"'); ?></td>
+          <td><?php   echo anchor("$controller/saznajViseORezervaciji/{$tretman->IdTretman}", "Saznaj",'class="button2"'); ?></td>
           </tr>
           <?php endforeach; ?>
           <?php endif; ?>
@@ -99,8 +114,7 @@
         <?php endif ?>
       </div>
         
-       <?php if(isset($poruka)) echo "<p class='alert alert-success' style='font-size:18pt; margin-right:300px;margin-left:300px; text-align:center'>".
-               $poruka."</p>"; ?>
+       <?php if(isset($poruka)) echo "<p class='alert alert-success' style='font-size:18pt; margin-right:300px;margin-left:300px; text-align:center'>".$poruka."</p>"; ?>
         <br>
         <hr class="linija">
 

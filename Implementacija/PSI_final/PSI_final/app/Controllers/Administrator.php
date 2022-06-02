@@ -67,7 +67,8 @@ class Administrator extends BaseController
       }
       return $this->brisanje_naloga();
   }
-    /**
+   
+      /**
      * Teodora Peric 0283/18 funckionalnost za odobravanje ili odbijanje zahteva za registraciju
      * podrazumeva da se klikom na link zahtevi za reg prikazuje tabela ili poruka da nema vise
      * zahteva
@@ -92,7 +93,7 @@ class Administrator extends BaseController
             $data['controller']='Administrator';
          return view ('stranice/paginacijaAdministrator', $data);  
       }          
-      return $this->prikaz('admin_ZahtevZaRegistracijuPraznaTabela', ['poruka'=>'Trenutno nema nijednog neobrđenog zahteva!','korisnici'=>null]);
+      return $this->prikaz('admin_ZahtevZaRegistracijuPraznaTabela', ['poruka'=>$poruka,'korisnici'=>null]);
     }
   
     
@@ -105,8 +106,9 @@ class Administrator extends BaseController
     { 
       $regKorisnikModel = new RegKorisnikModel();
       $regKorisnikModel->odobriKorisnika($IdRK);
-     
-      return $this->zahtevi_za_registraciju("Uspešno ste odobrili zahtev korisnika!");
+     $email= $regKorisnikModel->pronadjiPoIdu($IdRK)->email;
+      $poruka="Uspešno ste odobrili zahtev "."<a href='mailto:".$email."?subject=Registracija&body=Odobren zahtev!'>Obavesti i korisnika!</a>";
+      return $this->zahtevi_za_registraciju($poruka);
     }
     
     
@@ -119,10 +121,60 @@ class Administrator extends BaseController
     { 
       $regKorisnikModel = new RegKorisnikModel();
       $regKorisnikModel->odbijKorisnika($IdRK);
-      
-      return  $this->zahtevi_za_registraciju("Uspešno ste odbili zahtev korisnika!");
+      $email= $regKorisnikModel->pronadjiPoIdu($IdRK)->email;
+      $poruka="Uspešno ste odbili zahtev "."<a href='mailto:".$email."?subject=Registracija&body=Odbijen zahtev!'>Obavesti i korisnika!</a>";
+      return  $this->zahtevi_za_registraciju($poruka);
     }
   
+    
+    /**
+     * Teodora Peric 0283/18 prikupljanje vise informacija o konkretnom korisniku
+     * 
+     */
+    function saznajVise($IdRK){ 
+          $regKorisnikModel = new RegKorisnikModel();
+          $db = \Config\Database::connect();
+          $record= $db->table('registrovanikorisnik');
+          $record->where('IdRK',$IdRK);
+          $query = $record->get();
+          $result = $query->getFirstRow('object');
+          if($result->tipKorisnika=="S"){
+            $db = \Config\Database::connect();
+            $record= $db->table('salon');
+            $record->where('IdSalon',$IdRK);
+            $query = $record->get();
+            $result2 = $query->getFirstRow('object'); 
+            } 
+            else{ 
+             $db = \Config\Database::connect();
+            $record= $db->table('korisnikmenadzer');
+            $record->where('IdRK',$IdRK);
+            $query = $record->get();
+            $result2 = $query->getFirstRow('object'); 
+              }
+             return $this->prikaziOvo($result,$result2);
+    }
+    
+    /**
+     * Funkcija za prikaz informacija o korisniku
+     * @param type $res1
+     * @param type $res2
+     */
+        function prikaziOvo($res1,$res2){ 
+            $data=[
+                'res1'=>$res1,
+                'res2'=>$res2
+            ];
+        $data['controller']='Administrator';
+        echo view ('sabloni/header_administrator');
+        echo view("stranice/prikazi_konkretnog_korisnika_za_registraciju",$data);
+    
+}
+   
+   
+
+
+
     function posaljiMejl(){ 
         $email = \Config\Services::email();
         $config['protocol'] = 'sendmail';

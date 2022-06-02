@@ -1,6 +1,6 @@
 <?php
 /**
- * @author BigBrainS tim
+ * @author Teodora Peric 0283/18
  */
 ?>
 <div class="row divCentar">
@@ -10,12 +10,12 @@
     </div>
     <div class="col-sm-10 centar">
         <br>
-        <h2 class="dobrodosliTekst">
-        <?php
+        <h2 class="dobrodosliTekst">Trenutno nema nijednog neobrđenog zahteva!
+      
+            <br></h2>
+       <?php
         if(isset($poruka)) echo $poruka;
          ?>
-            <br></h2>
-     
         <br>
         <hr class="linija">
 

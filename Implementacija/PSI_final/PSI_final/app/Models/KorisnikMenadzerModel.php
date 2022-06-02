@@ -13,7 +13,7 @@ class KorisnikMenadzerModel  extends Model {
      protected $returnType = 'object';
      protected $allowedFields = ['ime','prezime','pol' ];
         
-    /**
+    /** Teodora Peric 0283/18
      * Insertovanje u tablelu korisnik menadzer 
      * @param type $id
      * @param type $data
@@ -29,7 +29,7 @@ class KorisnikMenadzerModel  extends Model {
                    ];
           $record->insert($data1);
     }
-     /**
+     /** Teodora Peric 0283/18
      * Insertovanje u tablelu korisnik menadzer 
      * @param type $id
      * @param type $data
@@ -45,4 +45,16 @@ class KorisnikMenadzerModel  extends Model {
                    ];
           $record->insert($data1);
     }
+     /**
+     * Teodora Peric 0283/18
+     */
+    function pronadjiKorisnika($IdK){ 
+        $db = \Config\Database::connect();
+       $record = $db->table('korisnikmenadzer');
+       $record->where('IdRK', $IdK);
+       
+       $query = $record->get();
+       $result = $query->getFirstRow('object');
+       return $result;
+   }
 }

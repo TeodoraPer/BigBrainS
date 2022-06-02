@@ -40,7 +40,86 @@ class TretmanModel extends Model{
         return $result;
         
     }
+         /**
+     * Teodora Peric 0283/18
+     * 
+     * odobravanje zahteva za rezervaciju
+     * 
+   */
+  function odobriRezervaciju($IdTretman){
+    $db = \Config\Database::connect();
+    $record = $db->table('tretman');
+          
+    $record->where('IdTretman',$IdTretman);
+    $query = $record->get();
+    $result = $query->getFirstRow('object');
+    if($result->jePotvrdjenaRezervacija==NULL){ 
+        $result->jePotvrdjenaRezervacija=1;
+        $this->postaviJeOdobrenZahtevZaRezervaciju($IdTretman,1);
+       
+    }
+ }
+ 
+/**
+ * Teodora Peric 0283/18
+ * 
+ * odbijanje registracije konkretnom korisniku
+ * 
+*/
+ function odbijRezervaciju($IdTretman){ 
+    $db = \Config\Database::connect();
+    $record = $db->table('tretman');
+          
+    $record->where('IdTretman',$IdTretman);
+    $query = $record->get();
+    $result = $query->getFirstRow('object');
+    if($result->jePotvrdjenaRezervacija==NULL){ 
+        $result->jePotvrdjenaRezervacija=0;
+        $this->postaviJeOdobrenZahtevZaRezervaciju($IdTretman,0);
+        return "Uspešno ste odbili zahtev korisnika!";
+    }
+ }
+ 
+ /**
+  * Teodora Peric 0283/18 postavljanje flega jeOdobrenZahtevZaRegistraciju na 1 ili 0
+  * @param type $IdRK
+  * @param type $vrednost
+  */
+ function postaviJeOdobrenZahtevZaRezervaciju($IdTretman,$vrednost){
+    $data = [
+       'jePotvrdjenaRezervacija' => $vrednost
+    ];
+    $db = \Config\Database::connect();
+    $recorder = $db->table('tretman');
+    $recorder->where('IdTretman', $IdTretman);
+    $recorder->update($data);
+     
+ }
+ 
+ /**
+  * Dohvatanje tremtana po Id-u
+  */
+ function dohvatiTretman($IdTr){ 
+     
+    $db = \Config\Database::connect();
+    $record = $db->table('tretman');
+    $record->where('IdTretman', $IdTr);
     
+    $query = $record->get();
+    $result = $query->getFirstRow('object');
+    return $result;
+ }
+
+ /**
+  * Teodora Peric 0283/18
+  */
+ function dohvatiEmailKorisnika($IdTr){ 
+     $tr=$this->dohvatiTretman($IdTr);
+     $regKorModel=new RegKorisnikModel();
+     $email=$regKorModel->pronadjiPoIdu($tr->idKorisnik)->email;
+     return $email;
+     
+ }
     
 
 }

@@ -49,6 +49,23 @@ class UslugaModel extends Model{
     $result = $query->getFirstRow('object');
     return $result;
 }
+
+ 
+   /**
+    * Teodora Peric 0283/18 dohvatanje naziva usluge po Id-u
+    * @return type $naziv
+    * @param IdUsluga
+    */  
+    function pronadjiNazivPoIdu($IdUsluga){ 
+        $db = \Config\Database::connect();
+        $record = $db->table('usluga');  
+        $record->where('IdUsluga',$IdUsluga);
+   
+        $query = $record->get();
+        $result = $query->getFirstRow('object');
+        return $result;
+   }
+  
 public function __get(string $name) {
    parent::__get($name);
 }

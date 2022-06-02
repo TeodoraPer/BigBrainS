@@ -33,5 +33,19 @@ class CenaUslugeModel  extends Model {
                    ];
                  $record->insert($data1);
     }
+    /**
+    * Teodora Peric 0283/18
+    * listanje svih usluga jednog salona
+    *  @param type $idSalon
+    */
+    function sveUslugeSalona($IdSalon){ 
+      $db = \Config\Database::connect();
+      $record=$this->db->table('cenausluge');
+        $db = \Config\Database::connect();
    
+    $record->where('IdSalon',$IdSalon);
+    $query = $record->get();
+    $result = $query->getResult();
+    return $result;
+}
 }

@@ -30,11 +30,12 @@
               <img class='logo' src="/images/logo2.png">
            
               <nav class="navbar navbar-expand-sm " >
-                <div class="btn-group">
+                <form class="form-inline" style="display:inline ;">
+                  <div class="btn-group">
                     <button class="dugme2"> <a class="linkNavBar " href="<?= site_url("Salon/index")?>">Početna</a></button>
                     <button class="dugme"><a class="linkNavBar" href="<?= site_url("Salon/pregled_salona")?>">Pregled salona</a></button>
                     <button class="dugme"><a class="linkNavBar" href="<?= site_url("Salon/pregled_usluga")?>">Pregled usluga</a></button>
-                    <button class="dugme3"><a class="linkNavBar" href="<?= site_url("Salon/zakazivanje_za_rezervaciju")?>">Zahtevi za rezervaciju</a></button>
+                    <button class="dugme3"><a class="linkNavBar" href="<?= site_url("Salon/zahtevi_za_rezervaciju")?>">Zahtevi za rezervaciju</a></button>
                     <button class="dugme3"><a class="linkNavBar" href="<?= site_url("Salon/potvrda_kraja_usluge")?>">Potvrda kraja usluge</a></button>
                     <button class="dugme1"><a class="linkNavBar" href="<?= site_url("Salon/logout")?>">Logout</a></button>
                   </div>
