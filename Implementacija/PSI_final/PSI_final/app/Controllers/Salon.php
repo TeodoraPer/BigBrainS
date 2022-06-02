@@ -36,6 +36,57 @@ class Salon extends BaseController
     public function potvrda_kraja_usluge(){ 
          $this->prikaz('centar_salon', []);
     }
+	
+	//Anastasija Volčanovska 0092/2019 fje za potvrdu kraja usluge (prikaz i sama potvrda)
+
+    public function potvrda_kraja_usluge_prikaz($tretmani = null, $korisnici = null) {
+        $this->prikaz('centar_potvrdaUspesnosti', ['tretmani' => $tretmani, 'korisnici' => $korisnici]);
+    }
+
+    public function potvrda_kraja_usluge() {
+        $korisnik = $this->session->get('ulogovaniKorisnik');
+
+        if (empty($korisnik)) {
+            return redirect()->to(site_url('Gost'));
+        }
+
+        $tretmanModel = new TretmanModel();
+
+        $tretmani = $tretmanModel->tretmaniZaSalon($korisnik->IdRK);
+
+        $korisnici = [];
+        $korisnikModel = new RegKorisnikModel();
+
+        foreach ($tretmani as $tretman) {
+            if (empty($korisnici[$tretman->idKorisnik])) {
+                $korisnici[$tretman->idKorisnik] = $korisnikModel->nadjiPrekoId($tretman->idKorisnik);
+            }
+        }
+
+        return $this->potvrda_kraja_usluge_prikaz($tretmani, $korisnici);
+    }
+
+    public function obradiTretman() {
+        $akcija = $this->request->getVar('akcija');
+
+        $akcija = explode('!', $akcija);
+
+        $tretmanModel = new TretmanModel();
+
+        if ($akcija[0] == 'potvrdi') {
+            $tretmanModel->update($akcija[1], ['jePotvrdjenKrajUsluge' => 1]);
+            //MAIL
+        } else {
+            $tretmanModel->update($akcija[1], ['jePotvrdjenKrajUsluge' => 0]);
+        }
+
+        return $this->potvrda_kraja_usluge();
+    }
+
+    public function zakazivanje_za_rezervaciju() {
+        $this->prikaz('centar_salon', []);
+    }
+
     /**
      * Teodora Peric 0283/18 obrada funkcionalnosti odobri zahtev za rezervaciju 
      * koja podrazumeva setovanje flega jePotvrdjenaRezervacija u tabeli Tretman
@@ -101,8 +152,14 @@ class Salon extends BaseController
         echo view ('sabloni/header_salon');
         echo view("stranice/prikazi_konkretne_rezervacije",$data);
     }
+	
+	
     
 }
+
+
+
+
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

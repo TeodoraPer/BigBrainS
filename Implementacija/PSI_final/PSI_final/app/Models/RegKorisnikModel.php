@@ -32,6 +32,12 @@ class RegKorisnikModel extends Model{
         $result = $query->getFirstRow('object');
         return $result;
     }
+	
+	//Anastasija Volčanovska 0092/19 
+	
+	public function nadjiPrekoId($id) {
+        return $this->where('idRK', $id)->first();
+    }
     
     /**
      * Aleksandra Dragojlovic 0409/19 

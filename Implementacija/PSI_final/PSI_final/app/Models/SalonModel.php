@@ -11,8 +11,7 @@ class SalonModel  extends Model {
      protected $table    = 'salon';
      protected $primaryKey = 'IdSalon';
      protected $returnType = 'object';
-     protected $allowedFields = ['naziv','slika','ponedeljak-petakOD','ponedeljak-petakDO','subotaOD','subotaDO','nedeljaOD'
-         ,'nedeljaDO','brojOcena','ukupanZbirOcena','brojUsluga'];
+     protected $allowedFields = ['naziv', 'slika', 'ponedeljak-petakOD', 'ponedeljak-petakDO', 'subotaOD', 'subotaDO', 'nedeljaOD' , 'nedeljaDO', 'brojOcena', 'ukupanZbirOcena', 'brojUsluga'];
         
     /** Teodora Peric 0283/18
      * Inserotvanje u tabelu Salon uz ubacivanje u tabelu CenaUsluga za svaku od izabranih usluga
@@ -215,6 +214,44 @@ class SalonModel  extends Model {
         $query = $record->get();
         $result = $query->getFirstRow('object');
         return $result;
+    }
+	
+	/**
+     * Anastasija Volčanovska tražimo salone po uslugama
+     * @param $IdSalon
+     */
+	 
+	public function pronadjiSaloneSaUslugama($usluge){
+        $cenaModel=new CenaModel();
+        $saloniKonacno=array();
+        $j=0;
+        $i=0;
+        foreach($usluge as $usluga){
+            $saloni=$cenaModel->nadjiSalone($usluga->IdUsluga);
+            if ($i==0){
+                foreach($saloni as $salon){
+                    $saloniKonacno[$j]=$salon->IdSalon;
+                    $j++;
+                }
+                $i++;
+            }else{
+                $ima=array();
+                $k=0;
+                foreach($saloni as $salon){                   
+                    if (in_array($salon->IdSalon,$saloniKonacno)){
+                        $ima[$k]=$salon->IdSalon;
+                    $k++;
+                    }                  
+                }
+                $saloniKonacno=$ima;
+            }
+        }
+        
+        if(empty($saloniKonacno)){
+            return array();
+        }
+        
+        return $this->whereIn('IdSalon', $saloniKonacno)->findAll();
     }
     
 

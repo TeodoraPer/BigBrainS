@@ -658,6 +658,175 @@ hr {
   background-color: #FFE2E2;
 }
 
+/*Anastasija*/
+.slike12
+{
+    margin-top:10%;
+    margin-left:5%;
+}
+
+.slike22{
+    margin-top:10%;
+    margin-left:50%;
+}
+
+.slike32{
+    margin-top:10%;
+    margin-left:5%;
+}
+
+.slike42{
+    margin-top:10%;
+    margin-left:50%;
+  
+}
+
+.slike5{
+    margin-top:30px;
+    margin-left:100px;
+    text-align:justify;
+}
+
+.slike6{
+    margin-top:30px;
+    margin-left:-5px;
+    text-align:justify;
+}
+
+.slike7{
+    margin-top:30px;
+    margin-left:115px;
+    text-align:justify;
+}
+
+input.cekbox{
+    margin-left:15px;
+    width:20px;
+    height:20px;
+}
+
+input.cekbox2{
+    margin-left:65px;
+    width:20px;
+    height:20px;
+}
+
+input.cekbox3{
+    margin-left:25px;
+    width:20px;
+    height:20px;
+}
+
+input.cekbox6{
+    margin-left:100px;
+    width:20px;
+    height:20px;
+}
+
+input.cekbox7{
+    margin-left:30px;
+    width:20px;
+    height:20px;
+}
+.dugmedalje{
+    margin-left:210px;
+}
+.izbor21{
+    margin-left:7%;
+    margin-top:0%;
+}
+
+.izbor2{
+    margin-left:50%;
+    margin-top:10%;
+}
+
+.izbor7{
+    margin-left:50%;
+    margin-top:10%;
+}
+
+.izbor8{
+    margin-left:50%;
+    margin-top:10%;
+}
+.usluge{
+    margin-top:5%;
+    font-family:'Comic Sans';
+    font-size: 25px;
+    margin-left:80px;
+}
+
+.uslugensv{
+    margin-top:15%;
+    text-align: right;
+    font-size: 25px;
+    font-family:'Comic Sans';
+    font-size: 25px;
+    margin-left:80px;
+}
+
+.slike13{
+    margin-top:10%;
+    margin-left:10%;
+    text-align:right;
+}
+
+.slike23{
+    margin-top:10%;
+    margin-left:10%;
+    text-align:right;
+}
+
+.slike33{
+    margin-top:10%;
+    margin-left:10%;
+    text-align:right;
+}
+
+.slike43{
+    margin-top:10%;
+    margin-left:10%;
+    text-align:right;
+}
+
+.slike53{
+    margin-top:10%;
+    margin-left:10%;
+    text-align:top;
+}
+
+.slike83{
+    margin-top:30px;
+    text-align:top;
+}
+
+.dugme33{
+    margin-top:5%;
+    margin-left:10%;
+    width: 213px;
+    height:50px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 1px 1px rgb(255,255,255);
+    font-size:24pt;
+}
+
+.zasisanje{
+    margin-top:50px;
+}
+
+.slika{
+    width: 200px;
+    height: 150px;
+    border: solid 1px black;
+}
+
+.slika{
+    width: 190px;
+    height: 120px;
+    border: solid 1px black;
+}
+
 /* za slucaj da ostavimo prazno kod admina
 .prazna{
   margin-top: 200px;

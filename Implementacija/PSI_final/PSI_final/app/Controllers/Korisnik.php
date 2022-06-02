@@ -41,9 +41,124 @@ class Korisnik extends BaseController
     public function logout(){ 
          $this->prikaz('centar_ulogovaniKorisnik', []);
     }
+	
+	 public function istorija_usluga() {
+        $this->prikaz('centar_ulogovaniKorisnik', []);
+    }
     
-    public function zakazivanje_tretmana(){ 
-         $this->prikaz('centar_ulogovaniKorisnik', []);
+    public function zakazivanje_tretmana($poruka = null) {
+        $this->prikaz('centar_zakazivanjeTretmana_1', ['poruka' => $poruka]);
+    }
+	
+	//Anastasija Volčanovska 0092/2019 fja koja omogucuje izbor usluge pomoću pretrage
+    
+    public function pretragaPoUslugama() {
+        $naziviUsluga = $this->request->getVar('usluge');
+
+        if (empty($naziviUsluga)) {
+            return $this->zakazivanje_tretmana('Morate izabrati barem jednu uslugu!');
+        }
+
+        $uslugaModel = new UslugaModel();
+
+        $usluge = $uslugaModel->nadjiUslugeSaImenima($naziviUsluga);
+
+        $salonModel = new SalonModel();
+
+        $this->session->set('usluge', $naziviUsluga);
+
+        return $this->zakazivanje_tretmana2($salonModel->pronadjiSaloneSaUslugama($usluge));
+    }
+    
+    //Anastasija Volčanovska 0092/2019 fje koje omogućavaju zakazivanje
+
+    public function zakazivanjeUSalonu() {
+        $salon = $this->request->getVar('IdSalon');
+
+        $this->session->set('salon', $salon);
+
+        $usluge = $this->session->get('usluge');
+
+        return $this->zakazivanje_tretmana3($usluge);
+    }
+
+    public function zakazivanje_tretmana2($saloni = null) {
+        $this->prikaz('centar_zakazivanjeTretmana_2', ['saloni' => $saloni]);
+    }
+
+    public function zakazivanje_tretmana3($usluge = null, $greska = null) {
+        $this->prikaz('centar_zakazivanjeTretmana_3', ['usluge' => $usluge, 'greska' => $greska]);
+    }
+
+    public function zavrsiZakazivanje() {
+        $salon = $this->session->get('salon');
+        $usluge = $this->session->get('usluge');
+        $korisnik = $this->session->get('ulogovaniKorisnik');
+
+        if (empty($korisnik)) {
+            return redirect()->to(site_url('Gost'));
+        }
+
+        if($korisnik->tipKorisnika == 'A') {
+            return redirect()->to(site_url('Administrator'));
+        }
+        
+        if($korisnik->tipKorisnika == 'S') {
+            return redirect()->to(site_url('Salon'));
+        }
+        
+        if (empty($salon) || empty($usluge)) {
+            return $this->prikaz('centar_ulogovaniKorisnik', []);
+        }
+
+        $rasa = $this->request->getVar('rasa');
+        $godine = $this->request->getVar('godine');
+        $ime = $this->request->getVar('ime');
+        $vreme = $this->request->getVar('vreme');
+        $velicina = $this->request->getVar('velicina');
+        $napomena = $this->request->getVar('napomena');
+
+        if (empty($rasa) || empty($godine) || empty($ime) || empty($vreme) || empty($velicina)) {
+            return $this->zakazivanje_tretmana3($usluge, 'Morate popuniti polja!');
+        }
+
+        if (!is_numeric($godine) || ((int) $godine < 0) || ((int) $godine > 30)) {
+            return $this->zakazivanje_tretmana3($usluge, 'Neispravne godine!');
+        }
+
+        if (strlen($ime) > 45) {
+            return $this->zakazivanje_tretmana3($usluge, 'Predugacko ime!');
+        }
+
+        $uslugaModel = new UslugaModel();
+        $uslugeObj = $uslugaModel->nadjiUslugeSaImenima($usluge);
+
+        $tretmanModel = new TretmanModel();
+
+        $tretmanModel->save([
+            'IdSalon' => $salon,
+            'rasa' => $rasa,
+            'ime' => $ime,
+            'velicina' => $velicina,
+            'idKorisnik' => $korisnik->IdRK,
+            'DatumVreme' => $vreme,
+            'brojTelefona' => $korisnik->brojTelefona,
+            'uzrast' => $godine,
+            'napomena'=> $napomena
+        ]);
+
+        $tretmanId = $tretmanModel->getInsertId();
+
+        $sadrziModel = new SadrziModel();
+
+        foreach ($uslugeObj as $usluga) {
+            $sadrziModel->save([
+                'IdUsluga' => $usluga->IdUsluga,
+                'IdTretman' => $tretmanId
+            ]);
+        }
+
+        $this->prikaz('centar_ulogovaniKorisnik', []);
     }
 
     /**

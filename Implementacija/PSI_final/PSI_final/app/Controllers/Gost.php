@@ -490,7 +490,7 @@ promene u klasi Routes da bi se ovo omogućilo
 
     }
 
-    //Anastasija Volcanovska 0092/19
+    //Anastasija Volcanovska 0092/19 funkcionalnost login
     public function loginObrada() {
         $ime = $this->request->getVar('korime');
         $lozinka = $this->request->getVar('lozinka');

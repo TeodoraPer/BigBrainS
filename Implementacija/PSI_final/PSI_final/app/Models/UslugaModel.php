@@ -13,6 +13,15 @@ class UslugaModel extends Model{
     protected $returnType = 'object';
     
     protected $allowedFields = ['Naziv'];
+	
+	
+	
+    /**
+  * Anastasija Volčanovska 0092/19
+  */
+    public function nadjiUslugeSaImenima($naziviUsluga){        
+        return $this->whereIn('Naziv', $naziviUsluga)->findAll();
+    }
    
     /**
      * Aleksandra Dragojlovic 0409/19 

@@ -11,7 +11,7 @@ class TretmanModel extends Model{
     protected $table = 'tretman';
     protected $primaryKey = 'IdTretman';
     protected $returnType = 'object';
-    protected $allowedFields = ['IdSalon', 'rasa','ime','brojTelefona', 'velicina', 'IdKorisnik','jePotvrdjenKrajUsluge','jePotvrdjenaRezervacija','DatumVreme'];
+    protected $allowedFields = ['IdSalon', 'rasa', 'ime', 'velicina', 'idKorisnik', 'jePotvrdjenKrajUsluge', 'jePotvrdjenaRezervacija', 'DatumVreme', 'brojTelefona', 'uzrast', 'napomena'];
    
  
     
@@ -120,6 +120,11 @@ class TretmanModel extends Model{
      return $email;
      
  }
-    
+    /**
+  * Anastasija Volčanovska 0092/19
+  */
+  public function tretmaniZaSalon($idSalon){
+        return $this->where('IdSalon', $idSalon)->where('jePotvrdjenKrajUsluge', NULL)->findAll();
+    }
 
 }

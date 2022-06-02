@@ -9,8 +9,8 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 
-class Filters extends BaseConfig
-{
+class Filters extends BaseConfig {
+
     /**
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
@@ -18,12 +18,15 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
+        'csrf' => CSRF::class,
+        'toolbar' => DebugToolbar::class,
+        'honeypot' => Honeypot::class,
+        'invalidchars' => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'gost'=>\App\Filters\GostFilter::class
+        'gost' => \App\Filters\GostFilter::class,
+        'korisnik' => \App\Filters\KorisnikFilter::class,
+        'administrator' => \App\Filters\AdministratorFilter::class,
+        'salon' => \App\Filters\SalonFilter::class,
     ];
 
     /**
@@ -34,14 +37,14 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
-            // 'invalidchars',
+        // 'honeypot',
+        // 'csrf',
+        // 'invalidchars',
         ],
         'after' => [
             'toolbar',
-            // 'honeypot',
-            // 'secureheaders',
+        // 'honeypot',
+        // 'secureheaders',
         ],
     ];
 
@@ -66,5 +69,10 @@ class Filters extends BaseConfig
      * @var array
      */
     public $filters = [
-       'gost'=>['before'=>['Gost/poslatZahtevZaRegistraciju']]    ];
+        'korisnik' => ['before' => ['Korisnik/*', 'Korisnik']],
+        'administrator' => ['before' => ['Administrator/*', 'Administrator']],
+        'salon' => ['before' => ['Salon/*', 'Salon']],
+        'gost' => ['before' => ['Gost/*', 'Gost', '/']],
+    ];
+
 }
