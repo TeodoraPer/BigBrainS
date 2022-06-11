@@ -1,0 +1,700 @@
+{
+  "id": "ecb196c2-4bec-409b-8f93-283c73334a26",
+  "version": "2.0",
+  "name": "PSI Testiranje",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "20a9bd2d-3e46-4ed0-85c6-60f067aa7cbd",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "357ce452-c32a-4d5d-aa6c-10cf82f362b9",
+    "name": "PromenaLozinke_Uspesno",
+    "commands": [{
+      "id": "a1d8670c-e97e-44af-8847-70567ea8686c",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/Gost/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6b193c0-0793-4cac-8924-eb7d430d1917",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4ebff05-c8cb-4308-a5b1-f726d383da64",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Promena lozinke",
+      "targets": [
+        ["linkText=Promena lozinke", "linkText"],
+        ["css=.promena", "css:finder"],
+        ["xpath=//a[contains(text(),'Promena lozinke')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/promenaLozinke']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Promena lozinke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff28b474-4be8-4469-987b-a28635d30347",
+      "comment": "",
+      "command": "click",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0180c46-1b14-4e0f-b319-67c528124648",
+      "comment": "",
+      "command": "type",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "petCare"
+    }, {
+      "id": "85b4899e-3b27-4ace-bfe6-bc7fd4d4fce7",
+      "comment": "",
+      "command": "click",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be8074e7-cc6d-4bbc-a087-ffae87bc12cf",
+      "comment": "",
+      "command": "type",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare"
+    }, {
+      "id": "b0523d35-2e38-4d60-8665-2be286f60a49",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(7) > .porukica",
+      "targets": [
+        ["css=tr:nth-child(7) > .porukica", "css:finder"],
+        ["xpath=//tr[7]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9c5d0cb-fe07-489e-94a2-efddccc977b4",
+      "comment": "",
+      "command": "click",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74d65df5-a503-42ad-b97d-fab8cae1e428",
+      "comment": "",
+      "command": "type",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare123"
+    }, {
+      "id": "dee6236f-f2f0-4ca1-9fe6-7a1ea8d7d780",
+      "comment": "",
+      "command": "click",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0326a1e8-0328-40fd-a0b3-2a38e751537b",
+      "comment": "",
+      "command": "type",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare123"
+    }, {
+      "id": "8571f156-7989-4d86-abce-72eda9c29d50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button1",
+      "targets": [
+        ["css=.button1", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'PROMENI LOZINKU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ddf5675-29d3-4543-a675-d22557ea6b98",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-center tr:nth-child(9) > td",
+      "targets": [
+        ["css=.text-center tr:nth-child(9) > td", "css:finder"],
+        ["xpath=//tr[9]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Lozinka je uspešno promenjena!')]", "xpath:innerText"]
+      ],
+      "value": "Lozinka je uspešno promenjena!"
+    }]
+  }, {
+    "id": "941d8d7b-3a49-4408-a98c-abd0053fff8c",
+    "name": "PromenaLozinke_KorisnikNePostoji",
+    "commands": [{
+      "id": "ee6497fb-2348-4964-978d-cfb77808f7e2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7eb3c7dc-6c81-4790-98b6-8f515585e769",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7eb76b17-389b-4939-b47d-7907eafc9c5c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9f474fb-990f-4ddb-b244-61c098abf62f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Promena lozinke",
+      "targets": [
+        ["linkText=Promena lozinke", "linkText"],
+        ["css=.promena", "css:finder"],
+        ["xpath=//a[contains(text(),'Promena lozinke')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/promenaLozinke']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Promena lozinke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9db468c-8747-4446-bc2b-c67c899a92dd",
+      "comment": "",
+      "command": "click",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5287dcf7-db1e-4882-b8d7-8ab3d5b60809",
+      "comment": "",
+      "command": "type",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "nesto"
+    }, {
+      "id": "2ae124be-35d2-406d-897d-83eecf9e5686",
+      "comment": "",
+      "command": "click",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7887773-c1e0-4686-85aa-c9967890fa09",
+      "comment": "",
+      "command": "type",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "nesto1"
+    }, {
+      "id": "b537e9d5-0058-4a0d-88a6-e327346bf9d7",
+      "comment": "",
+      "command": "click",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cb959c6-f66f-4830-b5f7-31f7c03b2901",
+      "comment": "",
+      "command": "type",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "nesto123"
+    }, {
+      "id": "34c4571d-d582-41bb-85fa-6fca033ed4b0",
+      "comment": "",
+      "command": "click",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f94ec19-a75f-4c47-9211-ae526eaee5e1",
+      "comment": "",
+      "command": "type",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "nesto233"
+    }, {
+      "id": "9661ed10-8e41-4488-9a32-73b42132a06d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button1",
+      "targets": [
+        ["css=.button1", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'PROMENI LOZINKU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eaae233-753a-4b2d-ac77-96c6ed88b535",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > .porukica",
+      "targets": [
+        ["css=tr:nth-child(1) > .porukica", "css:finder"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Korisnik ne postoji!')]", "xpath:innerText"]
+      ],
+      "value": "Korisnik ne postoji!"
+    }]
+  }, {
+    "id": "1c9586e3-a893-42dc-8e69-5c05b888cc00",
+    "name": "PromenaLozinke_NeispravnaStaraLozinka",
+    "commands": [{
+      "id": "f8a404b2-680b-45b6-a1d1-be8261944fce",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1681a85f-aaf7-4899-ab37-298ff7003650",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30f550dc-b137-4e66-96a4-a47bfa6e42e2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfb1cc6e-3aed-4dc9-afad-e1220c03105b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Promena lozinke",
+      "targets": [
+        ["linkText=Promena lozinke", "linkText"],
+        ["css=.promena", "css:finder"],
+        ["xpath=//a[contains(text(),'Promena lozinke')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/promenaLozinke']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Promena lozinke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ccec8a5-aa1f-4ec6-9448-fcbd892cd4c0",
+      "comment": "",
+      "command": "click",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5408f70a-8905-4522-9b07-141f3ebaaf17",
+      "comment": "",
+      "command": "type",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "petCare"
+    }, {
+      "id": "0cf10f79-157d-4ba9-be62-de118fc70a3a",
+      "comment": "",
+      "command": "click",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d046959-e93c-4e9a-b100-c728a566b3fb",
+      "comment": "",
+      "command": "type",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare1"
+    }, {
+      "id": "968e70c7-221c-4b54-909d-4b337a6d421e",
+      "comment": "",
+      "command": "click",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36c05e55-f039-4b05-b909-18283568a823",
+      "comment": "",
+      "command": "type",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare12"
+    }, {
+      "id": "36ec272a-0c57-4a15-af45-7ff7ee6ed879",
+      "comment": "",
+      "command": "click",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81bb5e98-aff2-46c5-a035-df5390e9b480",
+      "comment": "",
+      "command": "type",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare12"
+    }, {
+      "id": "ad8f9ee1-196d-4161-a133-525d8d804668",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button1",
+      "targets": [
+        ["css=.button1", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'PROMENI LOZINKU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ff3905a-0ecd-4703-aeec-d2a1aa1c459f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) > .porukica",
+      "targets": [
+        ["css=tr:nth-child(3) > .porukica", "css:finder"],
+        ["xpath=//tr[3]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Neispravna vrednost stare lozinke!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aff681c-1bb6-4473-bf80-14546c3a7c02",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > .porukica",
+      "targets": [
+        ["css=tr:nth-child(3) > .porukica", "css:finder"],
+        ["xpath=//tr[3]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Neispravna vrednost stare lozinke!')]", "xpath:innerText"]
+      ],
+      "value": "Neispravna vrednost stare lozinke!"
+    }]
+  }, {
+    "id": "3f7d3ec4-0e04-4276-8c61-00f5baf8d58b",
+    "name": "PromenaLozinke_LozinkaIPotvrdaSeNePoklapaju",
+    "commands": [{
+      "id": "d2f7db4a-a9eb-4886-a890-7c87cdbaf6af",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "263c1794-4a9a-4ded-acc7-38685c7e602f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51cf6027-5cf3-445a-9280-12828ebd539b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1d42a12-4c9d-4e3f-8f47-ef18b0460549",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Promena lozinke",
+      "targets": [
+        ["linkText=Promena lozinke", "linkText"],
+        ["css=.promena", "css:finder"],
+        ["xpath=//a[contains(text(),'Promena lozinke')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/promenaLozinke']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Promena lozinke')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2a404b9-9fa3-46ee-81ab-eaa3bfd98d91",
+      "comment": "",
+      "command": "click",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b27b35e-76a5-4002-9ac1-3254c3e3bbad",
+      "comment": "",
+      "command": "type",
+      "target": "name=korIme",
+      "targets": [
+        ["name=korIme", "name"],
+        ["css=tr:nth-child(2) .inpt1", "css:finder"],
+        ["xpath=//input[@name='korIme']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "petCare"
+    }, {
+      "id": "104f8ff4-950d-4390-8d26-6f5858c39680",
+      "comment": "",
+      "command": "click",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93f85086-1470-4d20-846b-be8c5382414d",
+      "comment": "",
+      "command": "click",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1017f09-163f-4ff1-9dcd-664ec8031dc8",
+      "comment": "",
+      "command": "type",
+      "target": "name=staraLoz",
+      "targets": [
+        ["name=staraLoz", "name"],
+        ["css=tr:nth-child(4) .inpt1", "css:finder"],
+        ["xpath=//input[@name='staraLoz']", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare123"
+    }, {
+      "id": "163dc2a0-f7e4-47af-b9df-01c0d1c52396",
+      "comment": "",
+      "command": "click",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f698333-fae1-4008-9684-d6c249e60dec",
+      "comment": "",
+      "command": "type",
+      "target": "name=novaLoz",
+      "targets": [
+        ["name=novaLoz", "name"],
+        ["css=tr:nth-child(6) .inpt1", "css:finder"],
+        ["xpath=//input[@name='novaLoz']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare"
+    }, {
+      "id": "68c57b3a-04d7-4948-9735-55d0553de523",
+      "comment": "",
+      "command": "click",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a862f6fa-10fb-47dd-9b5c-4bd739a35c82",
+      "comment": "",
+      "command": "type",
+      "target": "name=potvrdaLoz",
+      "targets": [
+        ["name=potvrdaLoz", "name"],
+        ["css=tr:nth-child(8) .inpt1", "css:finder"],
+        ["xpath=//input[@name='potvrdaLoz']", "xpath:attributes"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "petCare1"
+    }, {
+      "id": "f3771b17-d593-4df9-8d0f-2f5f221727ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button1",
+      "targets": [
+        ["css=.button1", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'PROMENI LOZINKU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94f4ed2d-608d-4a0a-876b-0827957956a7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(7) > .porukica",
+      "targets": [
+        ["css=tr:nth-child(7) > .porukica", "css:finder"],
+        ["xpath=//tr[7]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Nova lozinke i potvrda nisu iste!')]", "xpath:innerText"]
+      ],
+      "value": "Nova lozinke i potvrda nisu iste!"
+    }]
+  }],
+  "suites": [{
+    "id": "ee740872-31fb-4dc3-8b26-263fcf18c8e2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["20a9bd2d-3e46-4ed0-85c6-60f067aa7cbd"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
