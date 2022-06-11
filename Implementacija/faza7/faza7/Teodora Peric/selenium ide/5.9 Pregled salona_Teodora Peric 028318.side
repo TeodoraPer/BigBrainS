@@ -1,0 +1,174 @@
+{
+  "id": "9eafabd6-a920-40d0-96cd-6a4036c9ad76",
+  "version": "2.0",
+  "name": "5.9 Pregled salona_Teodora Peric 0283/18",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "c68b5ac4-8ea3-4f7d-a80a-9eedfa4fb6e0",
+    "name": "TP0_Pregled profila salona",
+    "commands": [{
+      "id": "76b60007-50ab-411c-9a55-199e85c56784",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e135e82-dcd1-436b-92af-aef29d4b3b77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c5d751a-d504-4af8-917c-3c61ff44500a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled salona",
+      "targets": [
+        ["linkText=Pregled salona", "linkText"],
+        ["css=.dugme:nth-child(2) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled salona')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_salona']", "xpath:href"],
+        ["xpath=//button[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled salona')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8973663-87a1-4a01-ac9a-3ec802e7986f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'SALONI')]", "xpath:innerText"]
+      ],
+      "value": "SALONI"
+    }, {
+      "id": "f867562b-3938-444f-a278-e75bbeb6ae43",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-sm-4:nth-child(2) .button2",
+      "targets": [
+        ["css=.col-sm-4:nth-child(2) .button2", "css:finder"],
+        ["xpath=(//a[contains(text(),'Pogledaj')])[2]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/saznajViseOSalonu/12/0']", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": "Pogledaj"
+    }, {
+      "id": "ebbb11ab-b02f-4785-888b-41f90eee1a7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-4:nth-child(2) .button2",
+      "targets": [
+        ["css=.col-sm-4:nth-child(2) .button2", "css:finder"],
+        ["xpath=(//a[contains(text(),'Pogledaj')])[2]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/saznajViseOSalonu/12/0']", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a0fd682-3a62-488f-87a9-62d2283201c5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_salona/0']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "76d7ca13-7ed4-4be3-86f7-8582f996c434",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card:nth-child(1) > .bg-transparent > .mb-0",
+      "targets": [
+        ["css=.card:nth-child(1) > .bg-transparent > .mb-0", "css:finder"],
+        ["xpath=//div[2]/div/div/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Usluge')]", "xpath:innerText"]
+      ],
+      "value": "Usluge"
+    }, {
+      "id": "53cdef9a-60c1-4ef3-beb3-7141d8152123",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card:nth-child(3) .mb-0",
+      "targets": [
+        ["css=.card:nth-child(3) .mb-0", "css:finder"],
+        ["xpath=//div[3]/div/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'🗓 Radno vreme')]", "xpath:innerText"]
+      ],
+      "value": "🗓 Radno vreme"
+    }, {
+      "id": "26de2114-6b81-401f-8bd2-5a5b0c8ddbc8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-sm-12 > .dobrodosliTekst",
+      "targets": [
+        ["css=.col-sm-12 > .dobrodosliTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Reviews')]", "xpath:innerText"]
+      ],
+      "value": "Reviews"
+    }, {
+      "id": "8e53cc5b-9bdc-46aa-ba94-b77686e7398d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_salona/0']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ae7d19f-e23d-4ef8-8ed1-47b3fc50a909",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'SALONI')]", "xpath:innerText"]
+      ],
+      "value": "SALONI"
+    }, {
+      "id": "c5de1e84-b4be-4413-9d0a-10eb2a2d945f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dugme2",
+      "targets": [
+        ["css=.dugme2", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61a600df-188b-4f78-a29a-b12db4dfad9e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3e6bf7e0-3ccb-48aa-bb51-30a84df2a792",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c68b5ac4-8ea3-4f7d-a80a-9eedfa4fb6e0"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

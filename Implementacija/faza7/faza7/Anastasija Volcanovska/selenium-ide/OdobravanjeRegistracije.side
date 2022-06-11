@@ -1,0 +1,462 @@
+{
+  "id": "28a9b348-3a1d-4700-881b-3a94648e0bbd",
+  "version": "2.0",
+  "name": "OdobravanjeRegistracije",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "340e0ae6-90b1-4c3b-a57b-3f7f9b65b24d",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "df05252e-a26e-4af6-9af6-ecef09a86bee",
+    "name": "PotvrdjivanjeRegistracije",
+    "commands": [{
+      "id": "1c78c95f-1e11-4bd6-9069-0ddac0c1812a",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0504fd7e-50ae-461f-8d5b-9b74b76ec592",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f199c841-7743-43c2-a574-00b2490c22c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a31a12ea-8f3a-4274-80fc-16cd8dbe776e",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0e5863a-f3ed-45e8-bbe7-dc955fec475b",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "5ce2f899-c6b9-432a-b711-b59b0e9861b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "611b73ae-d704-4d3d-b1c9-c6c5b00784d4",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Admin12345!"
+    }, {
+      "id": "037720ac-275b-411e-a286-4bf3c2abe3bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1789ca32-021d-4c53-85e8-e1c4ba0ed068",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zahtevi za registraciju",
+      "targets": [
+        ["linkText=Zahtevi za registraciju", "linkText"],
+        ["css=.dugme3 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Zahtevi za registraciju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/zahtevi_za_registraciju']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zahtevi za registraciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c17b8433-2963-4e97-8995-c7f1b3824cce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Odobri",
+      "targets": [
+        ["linkText=Odobri", "linkText"],
+        ["css=tr:nth-child(2) > td:nth-child(1) > .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Odobri')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/odobriKorisnika/6']", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Odobri')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31c2de97-bb13-46f0-8a2c-d306b26ca043",
+      "comment": "",
+      "command": "click",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste odobrili zahtev. Obavesti i korisnika!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f506206-7711-4a8e-a2d0-f938fd71ce90",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste odobrili zahtev. Obavesti i korisnika!')]", "xpath:innerText"]
+      ],
+      "value": "Uspešno ste odobrili zahtev. Obavesti i korisnika!"
+    }]
+  }, {
+    "id": "3139ae05-1177-4636-9927-24ff36b0026f",
+    "name": "OdbijanjeRegistracije",
+    "commands": [{
+      "id": "05d48ba8-7de3-4739-919e-3c7308fd9812",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/Administrator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72e1c92b-afdf-43a8-bcb5-ebc86ea98d5b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cf84716-8820-410a-a0bb-bab7f8129375",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bef645b-3ad7-4ad5-88d0-7935e67a34e3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55184ca2-0a14-4ee5-a5da-088fc9d11aa2",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb3d7438-184b-4df6-ba21-98ea44921cd4",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "45a7fe03-8ddd-4271-a27c-8751e12e80a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7eb1c4a6-9f56-4a02-b36b-1406164fc2f0",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Admin12345!"
+    }, {
+      "id": "3ab000b4-6c84-41b3-9a6a-c5bc822c6153",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01fc7a7a-815f-43f8-823f-1c4705c05a93",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zahtevi za registraciju",
+      "targets": [
+        ["linkText=Zahtevi za registraciju", "linkText"],
+        ["css=.dugme3 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Zahtevi za registraciju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/zahtevi_za_registraciju']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zahtevi za registraciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3907e59c-e1bc-4f5e-b71a-bbf65b79c7d2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Odbij",
+      "targets": [
+        ["linkText=Odbij", "linkText"],
+        ["css=tr:nth-child(2) > td:nth-child(2) > .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Odbij')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/odbijKorisnika/4']", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Odbij')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f242f25-129e-4d2c-aed9-559b7cb31b3e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste odbili zahtev. Obavesti i korisnika!')]", "xpath:innerText"]
+      ],
+      "value": "Uspešno ste odbili zahtev. Obavesti i korisnika!"
+    }]
+  }, {
+    "id": "bb9df612-de77-4503-8043-d5ef49a7b1ad",
+    "name": "NemaZahtevaZaRegistraciju",
+    "commands": [{
+      "id": "2f782781-cfce-4a2e-8334-f2c6d8232df7",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/Administrator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d4ad991-dcf5-4f9c-82fa-0613e820c3e5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24304f3d-2e6d-45c4-8578-9302ae1c0362",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c61699a-72ce-4546-947f-8d0287c02804",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c61af03-566c-4911-bfaf-b304f85fbdd9",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16624806-a05f-4af2-bdf9-2d8bf30e1043",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "fc97fea9-b3bd-4dc7-be01-a5ca15254e51",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38fe6ed5-9ae5-40a1-88a4-12d7b29a9f04",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Admin12345!"
+    }, {
+      "id": "80268373-47ca-4176-9761-1c4c889b6116",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c6751cd-97c6-4137-90c5-c3b056d697b3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zahtevi za registraciju",
+      "targets": [
+        ["linkText=Zahtevi za registraciju", "linkText"],
+        ["css=.dugme3 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Zahtevi za registraciju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/zahtevi_za_registraciju']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zahtevi za registraciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a09b7c7b-8463-4627-b480-089065897d46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dobrodosliTekst:nth-child(2)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(2)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Trenutno nema nijednog neobrađenog zahteva!\n')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33a42612-b34b-49ed-a9be-1c0708c95114",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dobrodosliTekst:nth-child(2)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(2)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Trenutno nema nijednog neobrađenog zahteva!\n')]", "xpath:innerText"]
+      ],
+      "value": "Trenutno nema nijednog neobrađenog zahteva!"
+    }]
+  }],
+  "suites": [{
+    "id": "713697d6-617f-4212-80fb-2350626cb16f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["340e0ae6-90b1-4c3b-a57b-3f7f9b65b24d"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

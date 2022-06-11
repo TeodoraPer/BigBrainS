@@ -1,0 +1,609 @@
+{
+  "id": "6d65ceff-49c6-42fe-9e4d-1ced94ca508a",
+  "version": "2.0",
+  "name": "Ocenjivanje",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "98e57231-cd0a-4a55-97f3-2d3e4fbb04e6",
+    "name": "UspesnoOstavljanjeRecenzije",
+    "commands": [{
+      "id": "2e9cdf82-84de-445b-80c5-bb537692a31f",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/Administrator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a504a1a-bc71-48dc-935d-77fb69b0fdab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94a0b1b5-e33d-4e33-adb4-340c0f68dae7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5203e63a-9b11-40ee-995e-90f1610bdf58",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "598d4edc-eff9-4fd0-af89-772328d6c067",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a14721f2-a8b9-42b4-b43a-4e6dc555d4f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "milos"
+    }, {
+      "id": "fd21746f-2032-426c-91f8-72afa78c4350",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c644753e-2c3f-43d6-86b5-6ff543f4a50d",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "milosD2"
+    }, {
+      "id": "b8a95602-2aa3-46da-abc0-4f7f24e4931f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed3b44bd-c8b8-46b4-9cfb-8b52d0582b0a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Istorija usluga",
+      "targets": [
+        ["linkText=Istorija usluga", "linkText"],
+        ["css=.dugme:nth-child(5) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Istorija usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Korisnik/istorija_usluga']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Istorija usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b12bc811-0936-43b2-8611-93b15470ee23",
+      "comment": "",
+      "command": "click",
+      "target": "id=.1.",
+      "targets": [
+        ["id=.1.", "id"],
+        ["name=.1.", "name"],
+        ["css=#\\.1\\.", "css:finder"],
+        ["xpath=//button[@id='.1.']", "xpath:attributes"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Oceni i ostavi recenziju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b88130d1-565f-4b22-a6fb-c8c7f0f3ab9c",
+      "comment": "",
+      "command": "click",
+      "target": "id=recenzija",
+      "targets": [
+        ["id=recenzija", "id"],
+        ["name=recenzija", "name"],
+        ["css=#recenzija", "css:finder"],
+        ["xpath=//textarea[@id='recenzija']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6814213-89fa-41eb-b0e1-29174099246f",
+      "comment": "",
+      "command": "type",
+      "target": "id=recenzija",
+      "targets": [
+        ["id=recenzija", "id"],
+        ["name=recenzija", "name"],
+        ["css=#recenzija", "css:finder"],
+        ["xpath=//textarea[@id='recenzija']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Bilo je super!"
+    }, {
+      "id": "e6ba0c8d-e6c1-4b45-8cac-e143d76ea603",
+      "comment": "",
+      "command": "click",
+      "target": "css=.redovi2 > .btn",
+      "targets": [
+        ["css=.redovi2 > .btn", "css:finder"],
+        ["xpath=//input[@value='Pošalji']", "xpath:attributes"],
+        ["xpath=//form[2]/table/tbody/tr[2]/td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f29a8a4-909f-4e1e-9ba1-68b252d1c6c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(6) tr:nth-child(1) > td",
+      "targets": [
+        ["css=form:nth-child(6) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//form[2]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Ostavili ste recenziju!!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40a0c56d-8a2a-4f85-adc2-1d866822bc37",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=form:nth-child(6) tr:nth-child(1) > td",
+      "targets": [
+        ["css=form:nth-child(6) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//form[2]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Ostavili ste recenziju!!')]", "xpath:innerText"]
+      ],
+      "value": "Ostavili ste recenziju!!"
+    }]
+  }, {
+    "id": "46d45dc4-49a4-4e41-b2ec-6281571800a4",
+    "name": "NeuspesnoOstavljanjeRecenzije",
+    "commands": [{
+      "id": "bc4ed2fa-19aa-43f6-9854-7cb7dc25d25d",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cd8cb37-35fd-4a5f-b379-d70b7196eeca",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce78e2ba-b80a-4dbf-8476-7c54ac8eb05c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Korisnik/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cba60016-a784-4dc1-ae69-d93f46ba8e84",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5b8e942-ce75-4afa-8959-baa8d5a08226",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa2ebaaa-28d6-4e80-b64e-019a6a8d74ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "milos"
+    }, {
+      "id": "7b8cbc05-509f-4537-8825-1ee1769a6a75",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c69b7f46-18fe-4506-9e72-7d27f941b059",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "milosD2"
+    }, {
+      "id": "357d0c7c-71f7-486d-ad7b-89face0ac930",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "42d858a7-3990-4284-96a8-7970153bc9e0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Istorija usluga",
+      "targets": [
+        ["linkText=Istorija usluga", "linkText"],
+        ["css=.dugme:nth-child(5) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Istorija usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Korisnik/istorija_usluga']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Istorija usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "093373b9-e3ee-4e55-8afb-abbd05aa8622",
+      "comment": "",
+      "command": "click",
+      "target": "id=.1.",
+      "targets": [
+        ["id=.1.", "id"],
+        ["name=.1.", "name"],
+        ["css=#\\.1\\.", "css:finder"],
+        ["xpath=//button[@id='.1.']", "xpath:attributes"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Oceni i ostavi recenziju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b4d5f1-a3b6-44a4-8d2a-447c4c5819ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.redovi2 > .btn",
+      "targets": [
+        ["css=.redovi2 > .btn", "css:finder"],
+        ["xpath=//input[@value='Pošalji']", "xpath:attributes"],
+        ["xpath=//form[2]/table/tbody/tr[2]/td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4f737d2-0c8d-41a7-80e2-2b03c5097f80",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(6) tr:nth-child(1) > td",
+      "targets": [
+        ["css=form:nth-child(6) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//form[2]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Popunite polje Recenzija da bi ostavili recenziju!!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ea84dea-e148-4145-b13b-14b571ddfb98",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=form:nth-child(6) tr:nth-child(1) > td",
+      "targets": [
+        ["css=form:nth-child(6) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//form[2]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Popunite polje Recenzija da bi ostavili recenziju!!')]", "xpath:innerText"]
+      ],
+      "value": "Popunite polje Recenzija da bi ostavili recenziju!!"
+    }]
+  }, {
+    "id": "91ad5ff3-6b3e-4ac8-b87f-0496f06fdeec",
+    "name": "OcenjivanjeUsluge",
+    "commands": [{
+      "id": "461a1754-736a-483a-ae76-039cddf57b28",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72540bcc-fe90-4f9c-bd8c-331939010d66",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aec53c5d-fc22-404f-8d0a-b4d8bc54d8cf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Korisnik/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f95ce70f-bf1d-4f49-9a80-79f56a437671",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89b15241-46ad-49fb-92c5-69ec7f3f7dac",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ba29e38-30ac-44c3-8a58-21b14ee4b6ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "milos"
+    }, {
+      "id": "b095c084-682c-49a1-8924-0a8f78ba0d32",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1f86176-fac9-473c-b049-badc4d21fe91",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "MilosD2"
+    }, {
+      "id": "2eb69104-251c-4f24-9ddf-f6e61d6cc42e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2c83986-ca92-4133-a335-2166e1870bfe",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08864d0c-95f4-4c2b-a195-a09c5a52fc43",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "milosD2"
+    }, {
+      "id": "6a48501a-56e3-420c-b5a5-871d972e9c13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1808b1b9-b45a-44da-85f5-500c9faab42e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Istorija usluga",
+      "targets": [
+        ["linkText=Istorija usluga", "linkText"],
+        ["css=.dugme:nth-child(5) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Istorija usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Korisnik/istorija_usluga']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Istorija usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0517583-25d4-4db2-9afb-6933863a24c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=.1.",
+      "targets": [
+        ["id=.1.", "id"],
+        ["name=.1.", "name"],
+        ["css=#\\.1\\.", "css:finder"],
+        ["xpath=//button[@id='.1.']", "xpath:attributes"],
+        ["xpath=//td[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Oceni i ostavi recenziju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84277882-29c6-4f16-aa46-83e2b860c061",
+      "comment": "",
+      "command": "type",
+      "target": "name=ocena",
+      "targets": [
+        ["name=ocena", "name"],
+        ["css=.rating--nojs", "css:finder"],
+        ["xpath=//input[@name='ocena']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "78cf3528-1925-44d1-b568-e530928cd0f0",
+      "comment": "",
+      "command": "click",
+      "target": "name=ocena",
+      "targets": [
+        ["name=ocena", "name"],
+        ["css=.rating--nojs", "css:finder"],
+        ["xpath=//input[@name='ocena']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a6b3246-af80-4685-9016-077dfd730270",
+      "comment": "",
+      "command": "click",
+      "target": "id=oceni",
+      "targets": [
+        ["id=oceni", "id"],
+        ["css=#oceni", "css:finder"],
+        ["xpath=//input[@id='oceni']", "xpath:attributes"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60740039-6d3f-431d-9c99-43fd7f2e4b9c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sredina_0409 > tbody > tr:nth-child(1) > td",
+      "targets": [
+        ["css=.sredina_0409 > tbody > tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Salon je ocenjen sa 4!')]", "xpath:innerText"]
+      ],
+      "value": "Salon je ocenjen sa 4!"
+    }]
+  }],
+  "suites": [{
+    "id": "74512b1c-f380-4628-be84-8465e98e86f5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

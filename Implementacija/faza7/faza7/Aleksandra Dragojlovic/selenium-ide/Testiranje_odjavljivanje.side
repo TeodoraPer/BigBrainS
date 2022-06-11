@@ -1,0 +1,415 @@
+{
+  "id": "f6fbf6ed-6b6d-47ee-a6e7-802c895a772d",
+  "version": "2.0",
+  "name": "Testiranje_odjavljivanje",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "867f5d13-6a51-40f9-ba15-80070bdfab1f",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "9e57edc3-5ac5-4659-a961-f60d0d0d841d",
+    "name": "Odjavljivanje_admin",
+    "commands": [{
+      "id": "27b9353e-940d-4fae-8ced-5341d742cffa",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed3356d0-dc49-405e-af67-440fc4a45f29",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "886x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bdb087f-2cd1-4313-8ce7-2df62d8d8f62",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40a608cc-8e90-4839-b1c5-403d184cb7ba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbad5354-fb38-4443-85d9-36384200b69f",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c068ec20-5508-4d48-b133-055cb2a56fe8",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "91587d20-b112-481b-a596-3d59e041f8df",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "351d6a4f-86aa-40e9-8cd9-6c3b24b72bdd",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Admin12345!"
+    }, {
+      "id": "7b652363-96d8-4846-9cc5-6a559c65a600",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e226a047-8ede-4add-aace-162fc14c55b0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72095f01-aa71-4424-b3a1-61af3dec1a0c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sredina > .dobrodosliTekst:nth-child(1)",
+      "targets": [
+        ["css=.sredina > .dobrodosliTekst:nth-child(1)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Dobrodošli u GroomRoom!')]", "xpath:innerText"]
+      ],
+      "value": "Dobrodošli u GroomRoom!"
+    }, {
+      "id": "a2dee8ef-6b91-4124-9b03-829e4a778666",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "95e3683f-c8dc-40df-a7d2-a5446c12ddd9",
+    "name": "Odjavljivanje_korisnik",
+    "commands": [{
+      "id": "4f578a87-2d3a-4423-a06d-0a6d7ab494e5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "691a9ed5-e4e5-4a91-847b-af2956294e5f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "886x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "596edc2a-5817-4f1e-80b9-1ba0ff21da29",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84b4d7b6-5a7e-463d-b4db-8fa7991473f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8b64c65-7317-45e5-85b7-0cea26e56a45",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jovan"
+    }, {
+      "id": "520e2e31-62fa-4b8e-a1b0-689cdaccb8e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a15db55a-47a0-427b-ad41-25915546b0fd",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "jovan#3"
+    }, {
+      "id": "026caa3a-2124-42b6-9491-6fa3595f5fa2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0da0934e-d8be-41b5-9583-9aaa8a286f2f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Korisnik/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cb892b2-d54f-4a33-83d7-ac7825953c4d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sredina > .dobrodosliTekst:nth-child(1)",
+      "targets": [
+        ["css=.sredina > .dobrodosliTekst:nth-child(1)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Dobrodošli u GroomRoom!')]", "xpath:innerText"]
+      ],
+      "value": "Dobrodošli u GroomRoom!"
+    }, {
+      "id": "7e73fc30-b84f-4b02-aa2b-32311376ce7a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e9f58414-75e3-4ded-b43e-d728005d3a48",
+    "name": "Odjavljivanje_salon",
+    "commands": [{
+      "id": "d8dc41c7-c64e-4801-a9e0-202524332367",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7375f3f-8cf9-4f7d-b23f-d25b87e1e566",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "886x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e355090-7399-4406-94fa-622ac7074383",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "266bd8ff-c01c-4374-8c9b-86cc6494dbfe",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6080ad9-adf6-4c65-ac55-f486e29fea8d",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "petHouse"
+    }, {
+      "id": "931be2eb-67fc-4607-a990-b5981cdac049",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1668f0e-de3a-4010-b2c0-00c9c95d40c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "petHouse123"
+    }, {
+      "id": "86ff99ba-8ee2-422f-9dfe-39da617f6451",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8501e95b-0064-41da-b42d-059ca73ef9fe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26af33b4-add5-44cb-8a36-78cfbd8bbac4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sredina > .dobrodosliTekst:nth-child(1)",
+      "targets": [
+        ["css=.sredina > .dobrodosliTekst:nth-child(1)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Dobrodošli u GroomRoom!')]", "xpath:innerText"]
+      ],
+      "value": "Dobrodošli u GroomRoom!"
+    }, {
+      "id": "da0ecb07-5234-46e0-84a7-c76778987545",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "cccd9a6d-f4db-4ebb-a1cb-ae1eb015b2b1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["867f5d13-6a51-40f9-ba15-80070bdfab1f"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

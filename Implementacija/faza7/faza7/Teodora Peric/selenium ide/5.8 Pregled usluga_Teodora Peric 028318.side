@@ -1,0 +1,1181 @@
+{
+  "id": "04b16704-d3fd-4b72-bd0b-8b24175cd948",
+  "version": "2.0",
+  "name": "5.8 Pregled usluga_Teodora Peric 0283/18",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "4431c0a5-d4c4-493f-b93c-b172094504d1",
+    "name": "TP0_Uspesan_pregled_usluga",
+    "commands": [{
+      "id": "7482f518-4f95-4569-a081-56a6b1b6ad43",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3170f9c5-379c-4fb4-b434-b3fae3e2fefd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "380b9896-a765-46ef-bac3-d7e029c9f7e1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c46d333d-92f4-447c-a563-d046969e56b4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "ba97e232-de39-4f27-8da9-eaa951aa650f",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Šišanje",
+      "targets": [
+        ["linkText=Šišanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(1) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Šišanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/sisanje']", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Šišanje')]", "xpath:innerText"]
+      ],
+      "value": "Šišanje"
+    }, {
+      "id": "e216ea4e-3180-4030-bc92-c31d6fefb9be",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Čišćenje ušiju",
+      "targets": [
+        ["linkText=Čišćenje ušiju", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(1) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Čišćenje ušiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/ciscenje_usiju']", "xpath:href"],
+        ["xpath=//div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Čišćenje ušiju')]", "xpath:innerText"]
+      ],
+      "value": "Čišćenje ušiju"
+    }, {
+      "id": "56e52e3d-ef6b-46fb-a39e-85e07538c0c8",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Kupanje",
+      "targets": [
+        ["linkText=Kupanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(2) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Kupanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/kupanje']", "xpath:href"],
+        ["xpath=//div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kupanje')]", "xpath:innerText"]
+      ],
+      "value": "Kupanje"
+    }, {
+      "id": "d24415bc-4014-4ffb-8612-eda208d7a968",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Frizura",
+      "targets": [
+        ["linkText=Frizura", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(2) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Frizura')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/frizura']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Frizura')]", "xpath:innerText"]
+      ],
+      "value": "Frizura"
+    }, {
+      "id": "5683d28d-c7d6-42c0-a345-fd9ef3029cb2",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Čišćenje očiju",
+      "targets": [
+        ["linkText=Čišćenje očiju", "linkText"],
+        ["css=.col-sm-1 .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Čišćenje očiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/ciscenje_ociju']", "xpath:href"],
+        ["xpath=//div[3]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Čišćenje očiju')]", "xpath:innerText"]
+      ],
+      "value": "Čišćenje očiju"
+    }, {
+      "id": "7fceb57f-44cb-4f28-bdc5-69ed6a215212",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Češljanje",
+      "targets": [
+        ["linkText=Češljanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(3) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Češljanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/cesljanje']", "xpath:href"],
+        ["xpath=//div[3]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Češljanje')]", "xpath:innerText"]
+      ],
+      "value": "Češljanje"
+    }, {
+      "id": "a029354e-c68e-4bf3-b898-89c6c09adf5d",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Sređivanje noktiju",
+      "targets": [
+        ["linkText=Sređivanje noktiju", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(3) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Sređivanje noktiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/sredjivanje_noktiju']", "xpath:href"],
+        ["xpath=//div[2]/div[3]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sređivanje noktiju')]", "xpath:innerText"]
+      ],
+      "value": "Sređivanje noktiju"
+    }, {
+      "id": "b59c19c6-415c-4470-a25f-e4bbfa8e6a17",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "415216cd-f604-4567-9e94-0783e2d5d3d0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cb971864-0319-459c-8cc8-340bd6027f15",
+    "name": "TP1_Usluga_Sisanje",
+    "commands": [{
+      "id": "22a9d542-d714-45f8-b31a-5a3442234443",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e28702c7-3a87-41e0-8717-4a532c236376",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "926a10d3-71fe-4ca1-87f8-5957c7be9eaf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "931c7f6a-9fdf-434c-95ac-ed645918853f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "b9d4459e-8097-4ae6-b8af-7472d801db1b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Šišanje",
+      "targets": [
+        ["linkText=Šišanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(1) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Šišanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/sisanje']", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Šišanje')]", "xpath:innerText"]
+      ],
+      "value": "Šišanje"
+    }, {
+      "id": "e4c32a25-0744-4538-b42f-49d638e664bd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Šišanje",
+      "targets": [
+        ["linkText=Šišanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(1) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Šišanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/sisanje']", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Šišanje')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7b9f2c1-1f14-4df3-a5a1-ac031492a195",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'ŠIŠANJE')]", "xpath:innerText"]
+      ],
+      "value": "ŠIŠANJE"
+    }, {
+      "id": "7abbd2c5-4a54-413f-a4bb-9e892acab5ce",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "1e11ac04-9673-418e-9d94-10b12f2a23fe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c68fc737-823b-4618-964f-b8091a069b36",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "8ea73b14-f18b-4116-b9e2-78180687a5cc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68b5bd8a-c2bf-4032-b38b-c785b7eff530",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5e230d97-83db-4950-a5e3-3b38e53a6ea4",
+    "name": "TP2_Usluga_Kupanje",
+    "commands": [{
+      "id": "cd319051-2bd2-4cdd-b57f-3956c28440ea",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bbfe896-50cb-4889-adbe-6b85e4e59a26",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f69d5707-ccc0-47a7-a969-4de54c05a16b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a406c67-207f-4dab-856b-f32f8e06d3a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86f54ff4-f9e2-4d5d-b141-fee3fe151a9f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "6bbf3937-bafc-41e8-852a-31b8dcd3301e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Kupanje",
+      "targets": [
+        ["linkText=Kupanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(2) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Kupanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/kupanje']", "xpath:href"],
+        ["xpath=//div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kupanje')]", "xpath:innerText"]
+      ],
+      "value": "Kupanje"
+    }, {
+      "id": "6be30ac6-fc1f-414b-ac8a-66dcfe16c030",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kupanje",
+      "targets": [
+        ["linkText=Kupanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(2) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Kupanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/kupanje']", "xpath:href"],
+        ["xpath=//div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kupanje')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5b0171c-a2b4-4bed-89aa-b1510b947c5c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'KUPANJE')]", "xpath:innerText"]
+      ],
+      "value": "KUPANJE"
+    }, {
+      "id": "39ebd508-7840-4c7c-b6a3-4b614caf22c6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "690b66df-1354-49a7-b015-b5fa7cf2584e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8dd97e54-2beb-4210-97a0-3a1da983d3a2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "6945bcc0-f00c-4456-bf66-7b59391997e2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "824421f6-a282-4be6-bd74-28b4af50f922",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f0518de6-6f7b-43db-ad4b-87568e638192",
+    "name": "TP3_Usluga_Frizura",
+    "commands": [{
+      "id": "cddc07eb-b3c1-4a17-8622-392b1481368a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "869b433b-6974-4307-8e2d-981b375c805c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e8ad2ca-d64a-4a45-90e1-292051fa97bc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8394a653-d5ca-41c2-aa35-d81326cd640a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "324d765f-7175-4e78-9e23-678424491fd8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Frizura",
+      "targets": [
+        ["linkText=Frizura", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(2) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Frizura')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/frizura']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Frizura')]", "xpath:innerText"]
+      ],
+      "value": "Frizura"
+    }, {
+      "id": "236731d9-b896-43a5-be37-566d21bc3e87",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Frizura",
+      "targets": [
+        ["linkText=Frizura", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(2) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Frizura')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/frizura']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Frizura')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3619f2b6-3a06-4302-a18a-c5c40e2870d6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'FRIZURA')]", "xpath:innerText"]
+      ],
+      "value": "FRIZURA"
+    }, {
+      "id": "82aca18f-293f-4f81-888d-31e0fe9ab52a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "424eb777-5bf1-4ec4-a37e-dd8d8bcb80a4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d399c4a-fde3-4097-b455-d50edf5e315e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "42eb6793-a936-4aa3-b59d-777535be0e2a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35971136-fddd-4e74-8a84-769e0a5fd4d1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e25adfa0-48bc-4f94-89a7-f82b120ccdad",
+    "name": "TP4_Usluga_Ciscenje usiju",
+    "commands": [{
+      "id": "d51bc5c2-dc43-44b6-8a09-07ac827244c1",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32e79f49-6f96-469b-9aa7-4b21f329b9cf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53650161-8a7c-4f17-8c88-4689a3d768a3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "855641d6-3bc6-4913-99d3-c64a7c5fa0cb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "0601450e-d0ee-4c90-8ad8-02ef3a5f5962",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Čišćenje ušiju",
+      "targets": [
+        ["linkText=Čišćenje ušiju", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(1) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Čišćenje ušiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/ciscenje_usiju']", "xpath:href"],
+        ["xpath=//div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Čišćenje ušiju')]", "xpath:innerText"]
+      ],
+      "value": "Čišćenje ušiju"
+    }, {
+      "id": "b0260e8c-4cc2-4e10-8093-694387056689",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Čišćenje ušiju",
+      "targets": [
+        ["linkText=Čišćenje ušiju", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(1) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Čišćenje ušiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/ciscenje_usiju']", "xpath:href"],
+        ["xpath=//div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Čišćenje ušiju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a4dd245-afb1-4de7-aa84-b41807c4ba5a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'ČIŠĆENJE UŠIJU')]", "xpath:innerText"]
+      ],
+      "value": "ČIŠĆENJE UŠIJU"
+    }, {
+      "id": "7b839585-2b4c-48a4-b790-23108e59dc9a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "c0b95e17-e02b-4107-9989-98df3c99a97d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14838f09-d50d-4972-a40f-0e38bfb538ab",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "d025df0a-fc3c-407c-a552-f2b3f0845da1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42df0c4e-5fe4-4feb-8590-e3b16a570944",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a6a47bf4-89ae-42b3-ac6c-11a51799ce10",
+    "name": "TP5_Usluga_Ciscenje ociju",
+    "commands": [{
+      "id": "266cb992-79a9-446b-9cab-4ff4bebe50f0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e271e82-b4f0-4859-bfcd-34dcbabe1e41",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64f05f78-5db6-4883-8f8f-5e0790a3469e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90ecccad-a682-4bb5-add7-9916288bde87",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "07533881-29e4-443d-bc92-261b8ca808fb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Čišćenje očiju",
+      "targets": [
+        ["linkText=Čišćenje očiju", "linkText"],
+        ["css=.col-sm-1 .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Čišćenje očiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/ciscenje_ociju']", "xpath:href"],
+        ["xpath=//div[3]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Čišćenje očiju')]", "xpath:innerText"]
+      ],
+      "value": "Čišćenje očiju"
+    }, {
+      "id": "55f3f755-83b9-4aba-a1de-3d7c3de93040",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Čišćenje očiju",
+      "targets": [
+        ["linkText=Čišćenje očiju", "linkText"],
+        ["css=.col-sm-1 .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Čišćenje očiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/ciscenje_ociju']", "xpath:href"],
+        ["xpath=//div[3]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Čišćenje očiju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d350823e-28a3-4d51-92e5-06c65091fdd0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'ČIŠĆENJE OČIJU')]", "xpath:innerText"]
+      ],
+      "value": "ČIŠĆENJE OČIJU"
+    }, {
+      "id": "1f9b4f91-7462-43dd-aa2e-31c4fd9489d8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "fa235f7b-2082-4b6a-8a22-c01717b9db4d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b6fa6e3-4eea-48ef-bf0b-d2c3c11c1a90",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "fd58b5bb-13b2-400a-b320-8775dd42ef0c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eebbc3e-9193-4d17-89ca-173d3f4ec907",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cb70abf8-c47e-42fb-ad7b-a473ba07ab26",
+    "name": "TP6_Usluga_Cesljanje",
+    "commands": [{
+      "id": "5063d89c-35a1-4e1a-996c-74f33583bdcf",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93b73eeb-96dc-44cc-abb7-0cd9c0de7130",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13201e84-7f96-4010-ab85-8b493e80d07a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d20e7826-07f3-4726-8b49-3cfb7348d058",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "5e40d70f-6c36-4dec-88bb-73225bb5a5ee",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Češljanje",
+      "targets": [
+        ["linkText=Češljanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(3) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Češljanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/cesljanje']", "xpath:href"],
+        ["xpath=//div[3]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Češljanje')]", "xpath:innerText"]
+      ],
+      "value": "Češljanje"
+    }, {
+      "id": "f421364d-19c8-449f-a644-3f20d5d652be",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Češljanje",
+      "targets": [
+        ["linkText=Češljanje", "linkText"],
+        ["css=.col-sm-4:nth-child(1) > .usluga:nth-child(3) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Češljanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/cesljanje']", "xpath:href"],
+        ["xpath=//div[3]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Češljanje')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc87ac9a-283b-4afb-9e37-eac99bd9abcc",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'ČEŠLJANJE')]", "xpath:innerText"]
+      ],
+      "value": "ČEŠLJANJE"
+    }, {
+      "id": "cac76c28-11f4-4167-996e-062c62524220",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "e9057d5d-5549-4f37-b51b-1014a78528c5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ac08df7-b9d9-40be-9181-00334da7314f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "cf97ee82-8c21-4e88-99b0-781c5395e01b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Početna",
+      "targets": [
+        ["linkText=Početna", "linkText"],
+        ["css=.dugme2 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Početna')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/index']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64d4b69a-3db4-45f6-aada-6e0b645c2d1a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "755f8552-e81d-45e0-ac77-6c7e2ef6ec77",
+    "name": "TP7_Usluga_Sredjivanje noktiju",
+    "commands": [{
+      "id": "ab2e28ee-f7ec-43f5-b280-f2dfadb34043",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "710f3a05-af47-4bfa-bd23-7b92226991ab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b2555fb-d27e-4bb1-bfa8-b26a763045ef",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled usluga",
+      "targets": [
+        ["linkText=Pregled usluga", "linkText"],
+        ["css=.dugme:nth-child(3) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled usluga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga']", "xpath:href"],
+        ["xpath=//button[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled usluga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "811d8442-2000-456d-b36c-3ef0de5d2948",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "0b780fdb-cd06-434b-832f-47a5a6b40693",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Sređivanje noktiju",
+      "targets": [
+        ["linkText=Sređivanje noktiju", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(3) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Sređivanje noktiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/sredjivanje_noktiju']", "xpath:href"],
+        ["xpath=//div[2]/div[3]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sređivanje noktiju')]", "xpath:innerText"]
+      ],
+      "value": "Sređivanje noktiju"
+    }, {
+      "id": "2c05141e-14db-4bc6-b11e-08c6cb4ffa83",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sređivanje noktiju",
+      "targets": [
+        ["linkText=Sređivanje noktiju", "linkText"],
+        ["css=.col-sm-4:nth-child(2) > .usluga:nth-child(3) .button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Sređivanje noktiju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/sredjivanje_noktiju']", "xpath:href"],
+        ["xpath=//div[2]/div[3]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sređivanje noktiju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "423ad361-2ab5-4650-a574-a0e35f08e534",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'SREĐIVANJE NOKTIJU')]", "xpath:innerText"]
+      ],
+      "value": "SREĐIVANJE NOKTIJU"
+    }, {
+      "id": "1c92b91e-bb61-44b2-bd0e-dc57a51589bd",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": "Idi nazad"
+    }, {
+      "id": "196276fe-add5-4fda-b822-72fbd1c9e9a2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Gost/pregled_usluga'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fc9c904-7f04-4999-9de9-fd82b24cd20a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.uslugeTekst",
+      "targets": [
+        ["css=.uslugeTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'USLUGE')]", "xpath:innerText"]
+      ],
+      "value": "USLUGE"
+    }, {
+      "id": "71e36db6-117d-4339-8607-1862c041318e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dugme2",
+      "targets": [
+        ["css=.dugme2", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Početna')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fbb98c1-a338-4d43-936a-53e138b10aed",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d35fecb5-2a6e-42bd-a524-35197e9b436a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4431c0a5-d4c4-493f-b93c-b172094504d1"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

@@ -1,0 +1,539 @@
+{
+  "id": "d0f77c97-0403-4d6f-98e5-ab6178d78a2e",
+  "version": "2.0",
+  "name": "Testiranje_odobravanje_rezervacije",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "4eceb847-e05d-45f7-82d6-883202a4eeab",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "8ecb6204-2da1-4dfc-93c6-83d027b93488",
+    "name": "Odobravanje_rez_uspesno",
+    "commands": [{
+      "id": "067e9703-3a61-49bf-8b65-9a090b32d51a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4eaca18c-e071-42d5-84bb-325cd7643483",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "886x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a7614dc-e655-4121-ae02-b2dd27668756",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02d68d28-18d6-43b2-978b-c919249786f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c2ed3a6-c36e-4e8d-9dd5-cf77eecf329a",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "veselaNjuskica"
+    }, {
+      "id": "6648e690-62d2-4fa1-a5ef-8150ffc538f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3843d675-0e12-47da-8946-ee912996c212",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "vesela123"
+    }, {
+      "id": "f1c340fd-bd82-4d06-9a48-760f993a8849",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "904a2226-3d33-452d-8170-91bb4c9b25c0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zahtevi za rezervaciju",
+      "targets": [
+        ["linkText=Zahtevi za rezervaciju", "linkText"],
+        ["css=.dugme3:nth-child(4) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Zahtevi za rezervaciju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/zahtevi_za_rezervaciju']", "xpath:href"],
+        ["xpath=//button[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zahtevi za rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d96efdd-5e23-4fa0-93b6-f54aa47b8011",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-sm-10 > .dobrodosliTekst",
+      "targets": [
+        ["css=.col-sm-10 > .dobrodosliTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"]
+      ],
+      "value": "Tabela sa zahtevima za rezervaciju"
+    }, {
+      "id": "a200e2e0-c784-4d60-a414-f00a2c2cf8c1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Saznaj",
+      "targets": [
+        ["linkText=Saznaj", "linkText"],
+        ["css=tr:nth-child(2) > td:nth-child(8) > .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Saznaj')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/saznajViseORezervaciji/7']", "xpath:href"],
+        ["xpath=//td[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Saznaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89eb3aa8-04d6-46cd-8443-ad682f2dee26",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sredina > .dobrodosliTekst",
+      "targets": [
+        ["css=.sredina > .dobrodosliTekst", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Pregled korisnikove forme za rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": "Pregled korisnikove forme za rezervaciju"
+    }, {
+      "id": "5b765554-daa9-4367-9a94-8cb44c1b0e7c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dobrodosliTekst:nth-child(2)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Podaci o ljubimcu')]", "xpath:innerText"]
+      ],
+      "value": "Podaci o ljubimcu"
+    }, {
+      "id": "c2afb367-40d7-4465-ba63-af23df2cfccb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dobrodosliTekst:nth-child(4)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(4)", "css:finder"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Usluge tretmana')]", "xpath:innerText"]
+      ],
+      "value": "Usluge tretmana"
+    }, {
+      "id": "08af11af-23b9-4679-bafc-361df9537045",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Idi nazad",
+      "targets": [
+        ["linkText=Idi nazad", "linkText"],
+        ["css=.button4", "css:finder"],
+        ["xpath=//a[contains(text(),'Idi nazad')]", "xpath:link"],
+        ["xpath=(//a[@href='http://localhost:8080/index.php/Salon/zahtevi_za_rezervaciju'])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Idi nazad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ab068cd-d51f-4042-9b76-9c290daef701",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Odobri",
+      "targets": [
+        ["linkText=Odobri", "linkText"],
+        ["css=tr:nth-child(2) > td:nth-child(6) > .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Odobri')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/odobriRezervaciju/7']", "xpath:href"],
+        ["xpath=//td[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Odobri')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "785136c2-0cd8-4fa9-8832-f8a0cbc88223",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste odobrili rezervacijuObavesti i korisnika!')]", "xpath:innerText"]
+      ],
+      "value": "Uspešno ste odobrili rezervacijuObavesti i korisnika!"
+    }, {
+      "id": "fae6c2ed-591c-4dcf-a53d-e6bb64e29d91",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "525656da-d4ac-43a6-965f-3ea56b37cd6a",
+    "name": "Odbijanje_rez_uspesno",
+    "commands": [{
+      "id": "104a7465-92bc-449b-ada7-5f195baba10c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "725fc7fc-793f-4af7-be03-0b2a74bbb7f1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "886x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9117b16-553a-4281-8d79-b735fbf573d6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22d25a1e-aeca-470d-8f54-64ab125fa151",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67ede4f2-a667-4337-b53d-de25ce613b7c",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "veselaNjuskica"
+    }, {
+      "id": "eb8bbdf7-99d9-4bd4-b302-c58f248b18b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ddd7fc5-e231-44e8-beb5-808a28dfe99f",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "vesela123"
+    }, {
+      "id": "0e575717-2971-4f66-9e4d-ad9b7cbe0ba2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1558652-2a49-4b60-a811-986f67f33cfa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zahtevi za rezervaciju",
+      "targets": [
+        ["linkText=Zahtevi za rezervaciju", "linkText"],
+        ["css=.dugme3:nth-child(4) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Zahtevi za rezervaciju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/zahtevi_za_rezervaciju']", "xpath:href"],
+        ["xpath=//button[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zahtevi za rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5df9e8d4-8e67-462e-8f50-49b5e45d348a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Odbij",
+      "targets": [
+        ["linkText=Odbij", "linkText"],
+        ["css=td:nth-child(7) > .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Odbij')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/odbijRezervaciju/7']", "xpath:href"],
+        ["xpath=//td[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Odbij')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e56ab51-14af-4479-b6a8-4dd3123979f7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste odbili rezervacijuObavesti i korisnika!')]", "xpath:innerText"]
+      ],
+      "value": "Uspešno ste odbili rezervacijuObavesti i korisnika!"
+    }, {
+      "id": "e09b2c95-d630-4603-85ac-4d494a5ddcaf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c574eff-41ae-467c-ab44-df672ce24d1b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d09cc37c-89fb-4fae-82a7-7b945ca953a2",
+    "name": "Odobravanje_rez_neuspesno",
+    "commands": [{
+      "id": "80000891-1ca9-4c3a-80ce-8c4d5ed3c671",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27636caa-428b-4d27-b1fe-4559a755bcdf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "890x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f27f0518-9162-460b-aa33-c71779e39ae4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0cee5fa-476a-4c41-880e-1d66009f8d87",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9ac6b03-3276-4832-9ba5-a5c9f63c8728",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "petCare"
+    }, {
+      "id": "dfce2260-2d00-4f42-94f2-06d05a503f3f",
+      "comment": "",
+      "command": "click",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57be5f48-9465-49bd-a02d-17454566e6d8",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "petCare123"
+    }, {
+      "id": "fffa19e7-2ea6-4595-b10f-4a30c78db7db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button2",
+      "targets": [
+        ["css=.button2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acfab260-0c23-463a-ae36-e767acb5ff08",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zahtevi za rezervaciju",
+      "targets": [
+        ["linkText=Zahtevi za rezervaciju", "linkText"],
+        ["css=.dugme3:nth-child(4) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Zahtevi za rezervaciju')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/zahtevi_za_rezervaciju']", "xpath:href"],
+        ["xpath=//button[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zahtevi za rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e1a01f5-9740-4ef3-93e9-8c703c09cc68",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dobrodosliTekst:nth-child(2)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(2)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Trnutno nema nijednog neobrđenog zahteva za rezervaciju!\n')]", "xpath:innerText"]
+      ],
+      "value": "Trnutno nema nijednog neobrđenog zahteva za rezervaciju!"
+    }, {
+      "id": "12a2e5ce-c2e5-452a-b1c8-94b07a91fc2b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Salon/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5458dba1-6c67-4af1-9a22-02087e0c897d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1764f0cd-b784-4fa1-b603-819fe340b9f9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4eceb847-e05d-45f7-82d6-883202a4eeab"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

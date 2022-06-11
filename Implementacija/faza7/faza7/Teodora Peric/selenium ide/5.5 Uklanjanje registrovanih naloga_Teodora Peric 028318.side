@@ -1,0 +1,375 @@
+{
+  "id": "a7ab4449-8873-45ea-9687-b5fcefc4c94a",
+  "version": "2.0",
+  "name": "5.5 Uklanjanje registrovanih naloga",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "33a67724-bcc8-427b-90ff-4318d97a4383",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "2e18f467-89ef-454a-9033-9084c3cb07c9",
+    "name": "TP0_Uspesno_uklonjen_nalog",
+    "commands": [{
+      "id": "8253418d-9e5c-4cc0-8d58-08fcbfae5af3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73f76230-412a-499d-abcd-ccdc4000aff0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ced0de33-1803-4b66-ba75-2e693d84452f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6095713e-a6e6-46cc-9ff2-042072eb7eac",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d74593c7-a134-4cba-9289-b816a36ec96a",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "2c165e04-9c57-415d-a051-54579fe91543",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Admin12345!"
+    }, {
+      "id": "009a1dea-0bb1-43b2-960a-c77ed8532c06",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f7bae06e-0408-4d03-b915-0b920792a964",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje naloga",
+      "targets": [
+        ["linkText=Brisanje naloga", "linkText"],
+        ["css=.dugme:nth-child(4) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje naloga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/brisanje_naloga']", "xpath:href"],
+        ["xpath=//button[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje naloga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27204b96-4705-4665-a8d2-61a892df0985",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dobrodosliTekst:nth-child(2)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(2)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Tabela sa zahtevima za uklanjanje')]", "xpath:innerText"]
+      ],
+      "value": "Tabela sa zahtevima za uklanjanje"
+    }, {
+      "id": "3aa0f22b-d581-4a0b-8d0c-d14121c59631",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-sm-2:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-2:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Ukloni korisnika')]", "xpath:innerText"]
+      ],
+      "value": "Ukloni korisnika"
+    }, {
+      "id": "c737d17f-d8ce-49c7-9701-0ab2203cc2dc",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-sm-2:nth-child(2)",
+      "targets": [
+        ["css=.col-sm-2:nth-child(2)", "css:finder"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Korisničko ime')]", "xpath:innerText"]
+      ],
+      "value": "Korisničko ime"
+    }, {
+      "id": "890f8d74-85d6-48a1-b588-72ee8eeb6ac7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-sm-2:nth-child(3)",
+      "targets": [
+        ["css=.col-sm-2:nth-child(3)", "css:finder"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'Kategorija')]", "xpath:innerText"]
+      ],
+      "value": "Kategorija"
+    }, {
+      "id": "762580d5-0e7c-48ae-aedb-2dd8fd2614ce",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Ukloni",
+      "targets": [
+        ["linkText=Ukloni", "linkText"],
+        ["css=tr:nth-child(2) .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Ukloni')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/ukloniKorisnika/5']", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ukloni')]", "xpath:innerText"]
+      ],
+      "value": "Ukloni"
+    }, {
+      "id": "a5e3d917-8563-4b4b-b428-dd47075082b4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ukloni",
+      "targets": [
+        ["linkText=Ukloni", "linkText"],
+        ["css=tr:nth-child(2) .button2", "css:finder"],
+        ["xpath=//a[contains(text(),'Ukloni')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/ukloniKorisnika/5']", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ukloni')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "032e2036-1374-49eb-92de-2680e729044e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste uklonili korisnika!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60bc2404-bb2e-4b27-9610-2eb94f99e6c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Uspešno ste uklonili korisnika!')]", "xpath:innerText"]
+      ],
+      "value": "Uspešno ste uklonili korisnika!"
+    }, {
+      "id": "b90661ea-1ccc-4194-a949-9e309f01cb28",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4534786-727d-4fa3-8876-4c3c65387d44",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "59a04de6-d1cd-4074-af34-fa86cf1d3b69",
+    "name": "TP1_Tabela je prazna",
+    "commands": [{
+      "id": "79906af2-a3c5-4c10-8776-c004986c5c00",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "612ea3d1-10b3-4bfc-bad6-797abe502dfe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b46640fc-250a-4bd1-b3ec-bfa416d92459",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Gost/login']", "xpath:href"],
+        ["xpath=//button[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c7ef4b5-27aa-4f8c-afff-4783f50c26fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12a9a812-a423-4025-9312-ab59e67edbb6",
+      "comment": "",
+      "command": "type",
+      "target": "id=korime",
+      "targets": [
+        ["id=korime", "id"],
+        ["name=korime", "name"],
+        ["css=#korime", "css:finder"],
+        ["xpath=//input[@id='korime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "d1bf215c-2753-493a-8634-a0c40dbcabf2",
+      "comment": "",
+      "command": "type",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Admin12345!"
+    }, {
+      "id": "b8aa4067-b32d-4664-a3e4-c255bc77430b",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=lozinka",
+      "targets": [
+        ["id=lozinka", "id"],
+        ["name=lozinka", "name"],
+        ["css=#lozinka", "css:finder"],
+        ["xpath=//input[@id='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "376f4b23-ad62-4060-a5ef-4780869f8a77",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brisanje naloga",
+      "targets": [
+        ["linkText=Brisanje naloga", "linkText"],
+        ["css=.dugme:nth-child(4) > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Brisanje naloga')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/brisanje_naloga']", "xpath:href"],
+        ["xpath=//button[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brisanje naloga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f64ebfc-013b-46f6-9b0e-3fe0df03bbd9",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.dobrodosliTekst:nth-child(2)",
+      "targets": [
+        ["css=.dobrodosliTekst:nth-child(2)", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Tabela sa zahtevima za uklanjanje')]", "xpath:innerText"]
+      ],
+      "value": "Tabela sa zahtevima za uklanjanje"
+    }, {
+      "id": "ad275d1c-ec84-44c8-a432-d1edaa291dd2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Trenutno nema neuklonjenih registrovanih naloga!')]", "xpath:innerText"]
+      ],
+      "value": "Trenutno nema neuklonjenih registrovanih naloga!"
+    }, {
+      "id": "bec91545-3aca-407d-8255-6a5b4de9e604",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dugme1 > .linkNavBar", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Administrator/logout']", "xpath:href"],
+        ["xpath=//button[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc2f6753-a52e-4628-ad6c-57be901ca615",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "600b4c27-346f-4340-ab39-cc53d9d45256",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["33a67724-bcc8-427b-90ff-4318d97a4383"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
